@@ -3,7 +3,7 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-url: https://Pig30nidaE.github.io
+url: https://pig30nidae.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
@@ -17,7 +17,7 @@ url: https://Pig30nidaE.github.io
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang: Ko
+lang: ko
 
 # The title of your blog. Used in the sidebar and the browser tab.
 title: Pig30nidaE Blog
