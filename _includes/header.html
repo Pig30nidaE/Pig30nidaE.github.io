@@ -1,7 +1,19 @@
 <header>
-  <div>
+	<div>
     {% assign owner_first_name = site.owner | split: " " %}
-    <h1>{{ owner_first_name[0] | downcase }}@blog:~<span id="current-path"></span>$</h1>
+    <h1>{{ owner_first_name[0] | downcase }}@blog:~<span id="current-path"></span>$ 
+	<span class="container">
+		<span class="row">
+		 <span class="col-12">
+		   <span id="search-bar">
+			 <i class="fa fa-search" aria-hidden="true"></i>
+			 <input id="search-input" type="text" placeholder="Search..." />
+		   </span>
+		   <ul id="results-container"></ul>
+		 </span>
+		</span>
+	</span>
+	</h1>
     <div class="header-links">
       {% include links.html %}
     </div>
@@ -10,4 +22,20 @@
 
 <script>
 	document.getElementById('current-path').innerText = window.location.pathname;
+</script>
+
+<!-- Script pointing to jekyll-search.js -->
+<script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+     searchInput: document.getElementById('search-input'),
+     resultsContainer: document.getElementById('results-container'),
+     json: '/search.json',
+     searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
+     noResultsText: 'No results found',
+     limit: 10000,
+     fuzzy: false,
+     exclude: ['Welcome']
+});
 </script>
