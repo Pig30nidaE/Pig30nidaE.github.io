@@ -7,6 +7,7 @@ title: search tag
 	<h2>
 		<ul id="search-tag">
 			<li> sudo make me a sandwich</li>
+			<li> maxx "C"</li>
 		</ul>
 	</h2>
 </section>
