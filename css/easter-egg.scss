@@ -1,21 +1,22 @@
-// #easter-egg {
-//	display: flex;
-//	justify-content: center;
-//	align-items: center;
-// } 
+ #sandwich-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} 
 
-   .sandwich {
-     position: relative;
-     top: 400px;
-   }
-  
-  .sandwich__legs {
+.sandwich {
+	position: relative;
+	top: 400px;
+}
+
+.sandwich__legs {
 	position: relative;
 	top: 400px;
 	z-index: 1;
-  }	
-  
-  .sandwich__body {
+}	
+
+.sandwich__body {
+	height: 400px;
 	position: relative;
 	top: -130px;
 	left: 50px;
