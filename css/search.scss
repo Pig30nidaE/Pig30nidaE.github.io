@@ -13,9 +13,9 @@ $body-foreground: $conifer !default;
 #search-bar {
     display: inline-block; /* 검색 바를 인라인 블록 요소로 변경하여 중앙 정렬 가능 */
     vertical-align: middle; /* 세로 가운데 정렬 */
-    margin-left: auto; /* 왼쪽 마진 추가 */
-	width: auto;
-	white-space: nowrap;
+    margin-left: 10px; /* 왼쪽 마진 추가 */
+    white-space: nowrap;
+    align-items: center;
 }
 
 #search-input {
@@ -26,7 +26,6 @@ $body-foreground: $conifer !default;
     background-color: transparent; /* 배경 투명 */
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
     font-size: 24px;
+    text-align: left;
+    min-width: 50px; /* 최소 너비 지정 */
 }
-
-
-
