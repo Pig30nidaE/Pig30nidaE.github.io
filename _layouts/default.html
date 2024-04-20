@@ -1,56 +1,42 @@
----
-# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+<!DOCTYPE html>
+<html>
+{% include head.html %}
 
-layout: base
----
+<body>
+  <div id="wrapper">
+    {% include header.html %}
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
+    </div>
+  </div>
 
-{% assign strings = site.data.strings %}
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page == 1 %}
+    <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
+    {% elsif paginator.previous_page%}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
+    {% else %}
+    <span class="page-item">&laquo;</span>
+    {% endif %} {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+    <span class="page-item">{{ page }}</span>
+    {% elsif page == 1 %}
+    <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">{{ page }}</a>
+    {% else %}
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
+    {% endif %} {% endfor %} {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&raquo;</a>
+    {% else %}
+    <span class="page-item">&raquo;</span>
+    {% endif %}
+  </div>
+  {% endif %} {% include footer.html %}
 
-<article class="page" role="article">
-  <header>
-    <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
-    {% include components/message.html text=page.description hide=page.hide_description %}
-  </header>
-
-  {{ content }}
-
-  <hr class="dingbat related"/>
-
-  {% if site.posts.size > 0 %}
-    <h2 class="hr-bottom">{{ strings.posts | default:"Posts" }}</h2>
-    <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
-        {% include_cached components/post-list-item.html post=post %}
-      {% endfor %}
-    </ul>
+  {% if site.google_analytics %}
+    {% include analytics.html %}
   {% endif %}
+</body>
 
-  {% assign pages = site.html_pages | where:"layout","page" | where_exp:"page","page.sitemap != false" %}
-  {% if pages.size > 0 %}
-    <h2 class="hr-bottom">{{ strings.pages | default:"Pages" }}</h2>
-    <ul class="related-posts">
-      {% for page in pages limit:5 %}
-        {% if page.layout == 'page' %}
-          <li class="h4">
-            <a href="{{ page.url | relative_url }}" class="flip-title">
-              <span>{{ page.title }}</span>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  {% endif %}
-</article>
+</html>
