@@ -116,7 +116,7 @@
     position: relative;
     transform-style: preserve-3d;
     cursor: pointer;
-    transition: transform 0.5s;
+    transition: transform 1s;
 }
 
 #ashBlossom_joyousSpring div {
@@ -127,7 +127,6 @@
 }
 
 .ash_joyous_front {
-    background-image: url(/assets/png/AshBlossom_JoyousSpring.png);
     transform: rotateY(180deg);
 }
 
@@ -136,6 +135,6 @@
     transform: rotateY(0deg);
 }
 
-.ashBlossom-container:hover #ashBlossom_joyousSpring {
-    transform: rotateY(180deg);  
+#ashBlossom_joyousSpring:hover {
+    transform: rotateY(180deg);
 }
