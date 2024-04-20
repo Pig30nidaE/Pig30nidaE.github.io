@@ -1,20 +1,25 @@
+// 이전에 발견한 이스터 에그를 숨기는 함수
+function hideEasterEgg() {
+    var allEasterEgg = document.querySelectorAll("#easter-egg .egg");
+    for (var i = 0; i < allEasterEgg.length; i++) {
+        allEasterEgg[i].style.display = 'none';
+    }
+}
+
 // 특정 조건에 따라 메시지를 표시하거나 숨기는 함수
 function toggleSpecialMessage(show, easterEggMsg) {
     var specialMessage = document.getElementById('special-message');
     var noResultsText = document.getElementById('results-container');
-    var easterEgg = document.getElementById('easter-egg');
-    var allEasterEgg = easterEgg.querySelectorAll("#easter-egg .egg");
-
+    
     if (show) {
+        hideEasterEgg();
         specialMessage.innerText = easterEggMsg;
         specialMessage.style.display = 'block';
         noResultsText.style.display = 'none'; // 결과가 없을 때 숨김
     } else {
         specialMessage.style.display = 'none';
         noResultsText.style.display = 'block'; // 결과가 없을 때 표시
-        for (var i = 0;i < allEasterEgg.length;i++) {
-            allEasterEgg[i].style.display = 'none';
-        }
+        hideEasterEgg(); // 이전에 발견한 이스터 에그 숨기기
     }
 }
 
@@ -28,7 +33,7 @@ function checkInput() {
         var sandwich = document.getElementById('sandwich');
         sandwich.style.display = 'block';
     } 
-    else if (searchTerm === 'maxx \"C\"') {
+    else if (searchTerm === 'maxx "C"') {
         toggleSpecialMessage(true, " 🌟 Ash Blossom & Joyous Spring 🌟 ");
         var ashBlossom_joyousSpring = document.getElementById('ashBlossom_joyousSpring');
         ashBlossom_joyousSpring.style.display = 'block';
