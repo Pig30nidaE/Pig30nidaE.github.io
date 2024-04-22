@@ -21,6 +21,16 @@ defaults:
     values:
       layout: "post"
 
+#menu:
+#  - title: Blog
+#    url:   /blog/
+#  - title: Projects
+#    url:   /projects/
+#  - title: Resume
+#    url:   /resume/
+#  - title: About
+#    url:   /about/
+
 future: true
 plugins:
   - jekyll-seo-tag
@@ -36,3 +46,4 @@ last-modified-at:
 # Custom variables
 owner : "Pig30nidaE"
 year : "2024"
+
