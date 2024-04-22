@@ -4,6 +4,7 @@ layout: default
 
 <article>
   <h2>{{ page.title }}</h2>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
+  <p class="categories"><span class="material-icons">category</span> {{ page.categories }} | <span class="material-icons">date_range</span><time datetime="{{ page.date | date_to_xmlschema }}" class="by-line"> {{ page.date | date_to_string }}</time>
+  <p class="last-midfied-at">last modfied   at : {{ page.last_modified_at | date: '%d %b %Y %R' }}</p>
   {{ content }}
 </article>
