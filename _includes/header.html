@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" href="/css/easter-egg.css">
+</head>
 <header>
 	<div>
 		{% assign owner_first_name = site.owner | split: " " %}
 		<h1>
 			<div class="blog-title-container">
 				<div class="blog-title">
-					{{ owner_first_name[0] | downcase }}@blog:~<span id="current-path"></span>$
+					<a href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">{{ owner_first_name[0] | downcase }}@blog:~<span id="current-path"></span>$</a>
 				</div>
-					<span id="search-bar">
-						<input id="search-input" type="text" autofocus/>
-						<i class="fa fa-search" aria-hidden="true"></i>
-					</span>
+				<span id="search-bar">
+					<input id="search-input" type="text" autofocus/>
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</span>
 			</div>
 			<ul id="results-container"></ul>
 			<div id="easter-egg">
