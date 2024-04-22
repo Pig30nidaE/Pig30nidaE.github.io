@@ -24,9 +24,9 @@ function toggleSpecialMessage(show, easterEggMsg) {
 }
 
 // 예시: 검색 입력에 따라 메시지를 표시
-function checkInput() {
-    var searchInput = document.getElementById('search-input');
-    var searchTerm = searchInput.value;
+function checkInput(searchTerm) {
+    //var searchInput = document.getElementById('search-input');
+    //var searchTerm = searchInput.value;
     
     if (searchTerm === 'sudo make me a sandwich') {
         toggleSpecialMessage(true, "Y U M M M M M M M M M Y"); // 특정 메시지만 표시
@@ -42,3 +42,5 @@ function checkInput() {
         toggleSpecialMessage(false, null); // 일반적인 결과 표시
     }
 }
+
+window.checkInput = checkInput;
