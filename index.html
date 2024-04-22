@@ -6,9 +6,24 @@ layout: default
     {% for post in paginator.posts %}
       <li>
           <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
-          <p class="categories">{{ post.categories }}</p>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+          <p class="categories"><span class="material-icons">category</span>
+            {% if post.categories.size > 0 %}
+            {{ post.categories }} | 
+            {% else %}
+            No category | 
+            {% endif %}
+            <span class="material-icons">date_range</span><time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time></p>
           <p>{{ post.content | strip_html | truncatewords:50 }}</p>
       </li>
     {% endfor %}
 </ul>
+
+<style>
+  time {
+    color:rgb(108, 140, 200);
+  }
+  .categories {
+    color:rgb(108, 140, 200);
+    font-weight: initial;
+  }
+</style>
