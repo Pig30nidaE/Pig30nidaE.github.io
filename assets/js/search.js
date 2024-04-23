@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	hashTags.forEach(function(tag) {
 		tag.addEventListener('click', function() {
-				var tagName = this.textContent.trim().substring(2); // Remove the leading '#' from the tag name
+				var tagName = this.textContent.trim().substring(1); // Remove the leading '#' from the tag name
 				searchInput.value = tagName; // Set the value of the search input to the clicked tag name
 				window.checkInput(tagName);
 				searchInput.dispatchEvent(new Event('input')); 

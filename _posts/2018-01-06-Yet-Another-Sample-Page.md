@@ -1,6 +1,8 @@
 ---
 title: Yet Another Sample Page
-published: false
+categories:
+  - Example
+published: true
 ---
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.

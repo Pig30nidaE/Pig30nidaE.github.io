@@ -56,3 +56,5 @@ gem "tzinfo-data" if Gem.win_platform?
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
 end
+
+gem 'jekyll-paginate-category'

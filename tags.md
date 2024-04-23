@@ -40,12 +40,12 @@ title: search tag
 					{% endif %}
 				{% endfor %}
 			{% for tag in tags %}
-				<span class="search-tag"> # {{ tag }}</span> &nbsp;
+				<span class="search-tag"> #{{ tag }}</span> &nbsp;
 			{% endfor %}
-			<span class="search-tag"> # sudo make me a sandwich</span>&nbsp;
-			<span class="search-tag"> # maxx "C"</span>&nbsp; <!-- finish tags -->
+			<span class="search-tag"> #sudo make me a sandwich</span>&nbsp;
+			<span class="search-tag"> #maxx "C"</span>&nbsp; <!-- finish tags -->
 		</ul>
-			<ul class="divider">
+		<ul class="divider">
 			<hr class="divider"><br/>
 			{% for tag in tags %}
 			<h3 class="{{ tag }}" id="{{ tag | slugify }}">{{ tag }}</h3>
