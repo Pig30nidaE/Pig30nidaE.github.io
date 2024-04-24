@@ -22,7 +22,7 @@ layout: default
     <span class="material-icons">date_range</span>
     <time datetime="{{ page.date | date_to_xmlschema }}"> {{ page.date | date_to_string }} | </time>
   </span>
-  <span class="last-midfied-at"><span class="material-symbols-outlined">edit_calendar</span> {{ page.last_modified_at | date: '%d %b %Y %R' }}</span>
+  <time class="last-midfied-at"><span class="material-symbols-outlined">edit_calendar</span> {{ page.last_modified_at | date: '%d %b %Y %R' }}</time>
   <p class="tags">
     <span class="material-symbols-outlined">sell</span>
     {% if page.tags.size > 0 %}
