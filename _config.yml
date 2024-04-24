@@ -41,21 +41,7 @@ last-modified-at:
 owner : "Pig30nidaE"
 year : "2024"
 
-#collections:
-#  featured_categories:
-#    permalink:         /:name/
-#    output:            true
-#  featured_tags:
-#    permalink:         /tag-:name/
-#    output:            true
-
-#category_path: "category" # <- default value
-#category_layout: "category.html" # <- default value
-
 gems: [jekyll-paginate, jekyll-paginate-category]
 
 paginate: 5
 paginate_path: "page:num"
-
-category_dir: "categories"
-category_layout: "index.html"

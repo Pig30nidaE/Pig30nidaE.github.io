@@ -8,8 +8,8 @@ layout: default
         <div class="icons_summary">
           <p class="categories_time">
             <span class="material-icons">category</span>
-            {% if post.categories.size > 0 %}
-              {% for category in post.categories %}
+            {% if post.categories.size > 1 %}
+              {% for category in post.categories offset:1 %}
                 {% if forloop.last %}
                   {{ category }}
                 {% else %}
@@ -18,7 +18,8 @@ layout: default
               {% endfor %}
             {% else %}
               No category
-              {% endif %}
+            {% endif %}
+          
             | 
             <span class="material-icons">date_range</span>
             <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time>

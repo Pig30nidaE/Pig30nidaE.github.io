@@ -9,7 +9,6 @@ easterEggScript.onload = function() {
 document.head.appendChild(easterEggScript);
 
 
-
 document.getElementById('current-path').innerText = window.location.pathname;
 // 페이지가 로드될 때 실행될 함수
 window.onload = function() {
