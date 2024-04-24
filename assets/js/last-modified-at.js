@@ -5,12 +5,12 @@ window.addEventListener("load", function () {
           return response.json();
         })
         .then((commits) => {
-          var modified = commits[0]["commit"]["committer"]["date"].slice(0, 10);
+          var modified = commits[0]["commit"]["committer"]["date"].slice(0, 20);
 
           return modified;
         })
         .then((modified) => {
-          var date = modified.split("-");
+          var date = modified.split(" ");
           var year = date[0];
 
           var month = console.log(date[0]);
