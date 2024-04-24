@@ -23,7 +23,8 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}"> {{ page.date | date_to_string }} | </time>
   </span>
   <span class="material-symbols-outlined">edit_calendar</span>
-  <span class="last-modfied-at" datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%d %b %Y %R' }}</span>
+  {% assign localLastModified = page.last_modified_at | date: '%d %b %Y %R' %}
+  <time class="last-modfied-at" datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ localLastModified }}</time>
   <p class="tags">
     <span class="material-symbols-outlined">sell</span>
     {% if page.tags.size > 0 %}
