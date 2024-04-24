@@ -144,6 +144,11 @@ dt {
 //  list-style-image:url('../assets/bullet.png');
 //}
 
+ul li {
+  list-style-type: square; /* 원 모양 마커로 변경 */
+}
+
+
 blockquote {
   color: $blockquote-color;
   padding-left: 10px;
