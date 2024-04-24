@@ -22,11 +22,8 @@ layout: default
           
             | 
             <span class="material-icons">date_range</span>
-            <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }} | </time>
+            <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time>
           </span>
-          <span class="material-symbols-outlined">edit_calendar</span>
-          {% assign localLastModified = page.last_modified_at | date: '%d %b %Y %R' %}
-          <time class="last-modfied-at" datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ localLastModified }}</time>
           <p class="tags">
             <span class="material-symbols-outlined">sell</span>
             {% if post.tags.size > 0 %}
