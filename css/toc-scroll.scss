@@ -1,0 +1,58 @@
+@import "../_sass/default_colors";
+@import "../_sass/rouge-base16-dark.scss";
+
+.toc {
+	position: absolute;
+	right: 0px;
+	width: 240px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-left: 2rem;
+	padding-right: 0.75rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	margin-right: 0px;
+	font-size: 1.0rem;
+	border-left: 2px solid #7f7a85;
+  
+	display: none;
+	@media (min-width: 100em){
+	  width: 240px;
+	  display: block;
+	}
+	@media (min-width: 110em){
+	  width: 300px;
+	  display: block;
+	}
+	@media (min-width: 120em){
+	  width: 360px;
+	  display: block;
+	}
+  
+	a.toc-active {
+	  font-weight: bold; 
+	  transition: all 0.125s ease-in 0.0000s; 
+	  font-size: 1.1rem;
+	  color: #ece5f2;
+	}
+  
+	ul {
+	  list-style-type: none;
+	  margin-bottom: 0.5rem;
+	  padding-left: 0rem;
+	  li {
+		padding-left: 1rem;
+	  }
+	}
+  
+	a {
+		text-decoration: none;
+		text-shadow: none;
+		color:#7f7a85;
+	}
+   
+}
+
+.toc li {
+	list-style-type: none;
+}
