@@ -82,6 +82,12 @@
   white-space: normal;
 }
 
+.blog-title a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
 #search-bar {
   display: inline-block; /* 검색 바를 인라인 블록 요소로 변경하여 중앙 정렬 가능 */
   vertical-align: middle; /* 세로 가운데 정렬 */

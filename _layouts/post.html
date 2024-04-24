@@ -4,6 +4,21 @@ layout: default
 
 <article>
   <h2>{{ page.title }}</h2>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
+  <p class="categories"><span class="material-icons">category</span>
+  {% if page.categories.size > 1 %}
+    {% for category in page.categories offset:1 %}
+      {% if forloop.last %}
+        {{ category }}
+      {% else %}
+        {{ category }} / 
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    No category
+  {% endif %}
+
+  | 
+    <span class="material-icons">date_range</span><time datetime="{{ page.date | date_to_xmlschema }}" class="by-line"> {{ page.date | date_to_string }}</time>
+  <p class="last-midfied-at">last modfied   at : {{ page.last_modified_at | date: '%d %b %Y %R' }}</p>
   {{ content }}
 </article>

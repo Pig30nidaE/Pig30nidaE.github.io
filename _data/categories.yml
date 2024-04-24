@@ -1,0 +1,10 @@
+- name: 42Seoul
+  subcategories:
+    - name: Born2code
+      posts:
+        - title: Libft
+          url: categories/42seoul/born2code/Libft
+    - name: La Piscine
+      posts:
+- name: Example
+  posts:

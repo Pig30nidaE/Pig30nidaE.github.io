@@ -6,14 +6,14 @@ title: Archive
 <section>
   {% if site.posts[0] %}
 
-    {% capture currentyear %}{{ 'now' | date: "%Y" }}{% endcapture %}
+    <!--{% capture currentyear %}{{ 'now' | date: "%Y" }}{% endcapture %}
     {% capture firstpostyear %}{{ site.posts[0].date | date: '%Y' }}{% endcapture %}
     {% if currentyear == firstpostyear %}
         <h3>This year's posts</h3>
     {% else %}  
         <h3>{{ firstpostyear }}</h3>
-    {% endif %}
-
+    {% endif %}-->
+    <h3>{{ firstpostyear }}</h3>
     {%for post in site.posts %}
       {% unless post.next %}
         <ul>
