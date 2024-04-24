@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+<h1 class="post-title">{{ page.title }}</h1>
 <div class="icons_summary">
   <span class="categories_time">
     <span class="material-icons">category</span>
@@ -34,6 +34,13 @@ layout: default
     {% endif %}
   </p>
 </div>
-<article>
+<article class="post-article">
+  <div class="toc">
+    <a href="#">맨 위로</a>
+    {% include toc.html html=content %}
+  </div>
   {{ content }}
 </article>
+
+<script type="text/javascript" src="/assets/js/toc-scroll.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/toc-scroll.css">

@@ -27,7 +27,6 @@ function toggleSpecialMessage(show, easterEggMsg) {
 function checkInput(searchTerm) {
     //var searchInput = document.getElementById('search-input');
     //var searchTerm = searchInput.value;
-    
     if (searchTerm === 'sudo make me a sandwich') {
         toggleSpecialMessage(true, "Y U M M M M M M M M M Y"); // 특정 메시지만 표시
         var sandwich = document.getElementById('sandwich');
