@@ -1,6 +1,6 @@
 ---
 layout: page
-title: search tag
+title: tags
 ---
 
 <style>
