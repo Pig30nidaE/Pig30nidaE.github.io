@@ -7,7 +7,9 @@ layout: default
         <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
         <div class="icons_summary">
           <span class="categories_time">
-            <span class="material-icons">category</span>
+            <span class="material-symbols-outlined">
+              folder_open
+            </span>
             {% if post.categories.size > 1 %}
               {% for category in post.categories offset:1 %}
                 {% if forloop.last %}

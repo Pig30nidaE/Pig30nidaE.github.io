@@ -1,4 +1,5 @@
 ---
 layout: category
-title: Programming
+title: Categories
+permalink: categories
 ---
