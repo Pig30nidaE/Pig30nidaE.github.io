@@ -11,6 +11,10 @@ $header: $conifer !default;
 $blockquote-color: $silver-chalice !default;
 $blockquote-border: $dove-grey !default;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +23,18 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Opera */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  opacity: 0;
+  animation: fadeInAnimation 0.3s ease-in forwards;
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* General & 'Reset' Stuff */
@@ -276,4 +292,13 @@ a:active, a:focus {
 
 #wrapper {
   min-height: calc(100vh - 100px);
+}
+
+.icons_summary * {
+  color:rgb(108, 140, 200);
+  font-weight: initial;
+}
+
+.icons_summary a {
+  text-shadow: none;
 }
