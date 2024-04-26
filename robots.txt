@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /contact.html
+Disallow: /private*/
 Allow: /
 Sitemap: https://pig30nidae.github.io/sitemap.xml
