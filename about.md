@@ -1,7 +1,12 @@
 ---
 layout: page
 title: About
-published: false
+published: True
 ---
 
-Something about me.
+<p>
+GitHub: <a href="https://github.com/Pig30nidaE">https://github.com/Pig30nidaE</a>
+</p>
+<p>
+Email: pig30nidae@gmail.com
+</p>
