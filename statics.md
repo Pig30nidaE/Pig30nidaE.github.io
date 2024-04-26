@@ -1,25 +1,14 @@
-<!--<script type = "text/javascript" >
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', '{{ site.google_analytics }}', 'auto');
-ga('send', 'pageview'); 
-</script>-->
+---
+layout: page
+title: statics
+---
 
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>Hello Analytics Reporting API V4</title>
-  <meta name="google-signin-client_id" content="<REPLACE_WITH_CLIENT_ID>">
+  <meta name="google-signin-client_id" content="677052360551-e9ep5jp1ki4866hjfbfhp4440eglor6p.apps.googleusercontent.com">
   <meta name="google-signin-scope" content="https://www.googleapis.com/auth/analytics.readonly">
 </head>
 <body>
@@ -34,7 +23,7 @@ ga('send', 'pageview');
 
 <script>
   // Replace with your view ID.
-  var VIEW_ID = '<REPLACE_WITH_VIEW_ID>';
+  var VIEW_ID = '311648221';
 
   // Query the API and print the results to the page.
   function queryReports() {
@@ -65,6 +54,7 @@ ga('send', 'pageview');
 
   function displayResults(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
+    console.log(formattedJsonn);
     document.getElementById('query-output').value = formattedJson;
   }
 </script>

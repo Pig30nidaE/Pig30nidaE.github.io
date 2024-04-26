@@ -41,3 +41,11 @@ gems: [jekyll-paginate, jekyll-paginate-category]
 
 paginate: 5
 paginate_path: "page:num"
+
+# Analytics
+analytics:
+  provider               : "google-gtag" 
+                          # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : "G-6FW2C4XBDM"
+    anonymize_ip         : # true, false (default)
