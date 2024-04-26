@@ -28,7 +28,7 @@ var tocNodes = getTOCNodes(toc);
 var before = undefined;
 
 document.addEventListener('scroll', function(e) {
-    if (window.scrollY >= articleY - 60) {
+    if (window.scrollY >= articleY - toc.offsetHeight - 60) {
         toc.style.cssText = "position: fixed; top: 60px;";
     } else {
         toc.style.cssText = "";
