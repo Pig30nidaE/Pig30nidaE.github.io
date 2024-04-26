@@ -2,8 +2,8 @@
   subcategories:
     - name: Born2code
       posts:
-        - title: Libft
-          url: categories/42seoul/born2code/Libft
+        - title: Libft (1)
+          url: categories/42seoul/born2code/Libft-(1)
     - name: La Piscine
       posts:
 - name: Example
