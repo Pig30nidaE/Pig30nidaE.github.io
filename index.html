@@ -13,9 +13,9 @@ layout: default
             {% if post.categories.size > 1 %}
                 {% for category in post.categories offset:1 %}
                     {% if forloop.last %}
-                        <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a>
+                        <a href="/categories#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a>
                     {% else %}
-                        <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a> / 
+                        <a href="/categories#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a> / 
                     {% endif %}
                 {% endfor %}
             {% else %}
