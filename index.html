@@ -4,28 +4,28 @@ layout: default
 <ul>
     {% for post in paginator.posts %}
       <li>
-        <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"><h2>{{ post.title }}</h2></a>
         <div class="icons_summary">
-          <span class="categories_time">
+          <div class="categories_time">
             <span class="material-symbols-outlined">
-              folder_open
+                folder_open
             </span>
             {% if post.categories.size > 1 %}
-              {% for category in post.categories offset:1 %}
-                {% if forloop.last %}
-                  {{ category }}
-                {% else %}
-                  {{ category }} / 
-                {% endif %}
-              {% endfor %}
+                {% for category in post.categories offset:1 %}
+                    {% if forloop.last %}
+                        <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a>
+                    {% else %}
+                        <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a> / 
+                    {% endif %}
+                {% endfor %}
             {% else %}
-              No category
+                No category
             {% endif %}
-          
             | 
             <span class="material-icons">date_range</span>
             <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time>
-          </span>
+        </div>
+        
           <p class="tags">
             <span class="material-symbols-outlined">sell</span>
             {% if post.tags.size > 0 %}
@@ -43,3 +43,4 @@ layout: default
 </ul>
 
 <script src="/assets/js/tags.js" type="text/javascript"></script>
+<script src="/assets/js/categories.js" type="text/javascript"></script>

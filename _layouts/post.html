@@ -11,9 +11,9 @@ layout: default
     {% if page.categories.size > 1 %}
       {% for category in page.categories offset:1 %}
         {% if forloop.last %}
-          {{ category }}
+            <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a>
         {% else %}
-          {{ category }} / 
+            <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a> / 
         {% endif %}
       {% endfor %}
     {% else %}
@@ -53,6 +53,7 @@ layout: default
         async>
 </script>
 
+<script type="text/javascript" src="/assets/js/categories.js"></script>
 <script type="text/javascript" src="/assets/js/toc-scroll.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/toc-scroll.css">
 <link rel="stylesheet" type="text/css" href="/css/comments.css">
