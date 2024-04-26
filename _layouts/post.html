@@ -42,6 +42,9 @@ layout: default
 <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
   {{ content }}
 </article>
+<div class="pag-nav">
+  {% include post-pagination.html html=content %}
+</div>
 
 <!-- utterance comment -->
 <script src="https://utteranc.es/client.js"
