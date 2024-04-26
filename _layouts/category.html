@@ -12,7 +12,7 @@ layout: default
 <section>
   {% for category in site.data.categories %}
       {% if category.posts or category.subcategories %}
-        <h2 class="category-{{ category.name }}">{{ category.name }}</h2>
+        <h2 class="{{ category.name }}">{{ category.name }}</h2>
         {% for post_id in category.posts %}
           {% assign post = site.posts | where: "title", post_id.title | first %}
           <ul class="postinfo">
@@ -25,7 +25,7 @@ layout: default
       {% endif %}
       {% if category.subcategories %}
           {% for subcategory in category.subcategories %}
-              <ul class="subcategory-{{ subcategory.name }}">
+              <ul class="{{ subcategory.name }}">
                   {% if subcategory.posts %}
                     <h3>{{ subcategory.name }}</h3>
                   {% endif %}

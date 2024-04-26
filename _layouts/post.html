@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <h1 class="post-title">{{ page.title }}</h1>
 <div class="icons_summary">
   <span class="categories_time">
@@ -10,9 +11,9 @@ layout: default
     {% if page.categories.size > 1 %}
       {% for category in page.categories offset:1 %}
         {% if forloop.last %}
-          {{ category }}
+            <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a>
         {% else %}
-          {{ category }} / 
+            <a href="/categories/#{{ category | slugify }}" data-category="{{ category | slugify }}">{{ category }}</a> / 
         {% endif %}
       {% endfor %}
     {% else %}
@@ -34,17 +35,11 @@ layout: default
     {% endif %}
   </p>
 </div>
-{% assign author = site.data.authors[page.author] %}
-{% if page.date_modified %}
-  {% assign modified = page.date_modified %}
-{% else %}
-  {% assign modified = page.date %}
-{% endif %}
+<div class="toc">
+  <a href="#">맨 위로</a>
+  {% include toc.html html=content %}
+</div>
 <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="toc">
-    <a href="#">맨 위로</a>
-    {% include toc.html html=content %}
-  </div>
   {{ content }}
 </article>
 
@@ -58,6 +53,13 @@ layout: default
         async>
 </script>
 
+<script type="text/javascript" src="/assets/js/categories.js"></script>
 <script type="text/javascript" src="/assets/js/toc-scroll.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/toc-scroll.css">
 <link rel="stylesheet" type="text/css" href="/css/comments.css">
+<style>
+  .post-article {
+    position: relative;
+    z-index: 2;
+  }
+</style>
