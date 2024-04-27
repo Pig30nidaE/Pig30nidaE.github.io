@@ -4,6 +4,8 @@
       posts:
         - title: Libft (1)
           url: categories/42seoul/born2code/Libft-(1)
+        - title: Libft (2)
+          url: categories/42seoul/born2code/Libft-(2)
     - name: La Piscine
       posts:
 - name: Example
