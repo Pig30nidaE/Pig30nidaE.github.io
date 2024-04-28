@@ -1,12 +1,12 @@
 .particle {
   position: fixed;
-  width: 4px; /* Adjust the size of the particle */
+  width: 4px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.5); /* Transparent white color */
   border-radius: 50%;
   animation: popUp 1s linear infinite;
   box-shadow: 0 54 80px rgba(255, 255, 255, 0.5); /* Add a glow effect with box-shadow */
-  z-index: 1;
+  z-index: -999;
 }
 
 @keyframes popUp {
@@ -29,25 +29,179 @@
   }
 }
 
-.shooting-star {
-  position: fixed;
-  width: 2px;
-  height: 10px;
-  background-color: white;
-  animation: shooting-star-animation 10s linear;
-  z-index: 1;
+
+@use 'sass:math';
+
+@layer tokens {
+
+  :root {
+    --color-primary: rgba(220, 219, 219, 0.78);
+    --color-surface: #242425;
+    --time: 24s;
+  }
 }
 
-@keyframes shooting-star-animation {
-  0% {
-    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+@property --shadow-color {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: true;
+}
+@layer stars {
+  .stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    &:before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      filter: url(#stars) saturate(0) brightness(1.5);
+      mix-blend-mode: overlay;
+      opacity: .15;
+      animation: stars-animation 20s ease-in-out infinite;
+    }
+    z-index: -999;
   }
-  50% {
-    transform: translate(50vw, 50vh) rotate(45deg) scale(1);
-    opacity: 1;
+  .stars-highlights {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: .6;
+  
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      filter: url(#stars-highlights) saturate(0) brightness(1.5);
+      mix-blend-mode: lighten;
+      opacity: .2;
+      animation: stars-animation-2 20s ease-in-out infinite;
+    }
+    z-index: -999;
   }
-  100% {
-    transform: translate(100vw, 0) rotate(45deg) scale(0);
-    opacity: 0;
+  
+  @keyframes stars-animation {
+    from {
+      translate: 1vmin 2vmin;
+      rotate: 0deg;
+    }
+    30% {
+      translate: 1vmin -2vmin;
+    }
+    50% {
+      translate: -1vmin 2vmin;
+      rotate: 10deg;
+    }
+    to {
+      translate: 1vmin 2vmin;
+      rotate: 0deg;
+    }
+  }
+  
+  
+  @keyframes stars-animation-2 {
+    from {
+      translate: 1vmin -2vmin;
+    }
+    30% {
+      translate: -1vmin -2vmin;
+    }
+    50% {
+      translate: 1vmin -2vmin;
+    }
+    to {
+      translate: 1vmin -2vmin;
+    }
+  }
+  .startails {
+    position: absolute;
+    inset: 0;
+    opacity: .6;
+
+    > div {
+      --distance: 20vmax;
+      border-radius: 50%;
+      width: .55vmax;
+      aspect-ratio: 3 / 1;
+      background: white;
+      translate: calc(var(--x) * 100vw) calc(var(--y) * 100vh);
+      opacity: 0;
+      animation: startails-animation 10s calc(var(--delay) * var(--time) * 6) linear infinite;
+      box-shadow: 0 0 .2vmax white;
+    }
+
+    @for $i from 0 through 200 {
+      > div:nth-of-type(#{$i + 1}) {
+        --x: #{math.random()};
+        --y: #{math.random()};
+        --x2: #{math.random() - .5};
+        --y2: #{math.random() - .5};
+        --delay: #{math.random()};
+      }
+    }
+  }
+  @keyframes startails-animation {
+    from {
+      opacity: 1;
+      translate: calc(var(--x) * 100vw) calc(var(--y) * 100vh);
+      scale: .9;
+    }
+    2% {
+      scale: .4;
+    }
+    5% {
+      translate: calc(var(--x) * 100vw + var(--y2) * var(--distance)) calc(var(--y) * 100vh + var(--x2) * var(--distance));
+      opacity: 0;
+      scale: 1;
+    }
+
+
+    to {
+      translate: calc(var(--x) * 100vw + var(--y2) * var(--distance)) calc(var(--y) * 100vh + var(--x2) * var(--distance));
+
+      scale: 1;
+      opacity: 0;
+    }
   }
 }
+
+.stars-blur {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(50vmin 70vmin at 70% 70%, rgba(255, 255, 255, .12), transparent),
+  radial-gradient(40vmin 30vmin at 70% 70%, rgba(255, 255, 255, .12), transparent),
+  radial-gradient(40vmin 60vmin at 10% 70%, rgba(255, 255, 255, .14), transparent),
+  radial-gradient(80vmin 100vh at 30% 70%, rgba(255, 255, 255, .10), transparent);
+  filter: blur(5vmin);
+  pointer-events: none;
+  z-index: -999;
+}
+
+.color-filter {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: conic-gradient(at 50% 60%, rgb(50 56 92 / 27%), rgb(152 75 132 / 7%), rgb(150 75 152 / 4%), rgb(50 56 92 / 27%));
+  mix-blend-mode: color;
+  pointer-events: none;
+  z-index: -999;
+}
+
+.stars,
+.stars-highlights,
+.particles,
+.stars-blur,
+.color-filter,
+.filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+}
+

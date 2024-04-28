@@ -17,4 +17,5 @@
 	box-shadow: 0 0 500px 30px #ffebcd, 0 0 70px 50px #ffdb58, 0 0 100px 80px #ffdb58, 0 0 100px 80px #f1c426, 0 0 100px 80px #ee8228, 0 0 100px 80px #f88100, 0 0 100px 80px #c56500, 0 0 100px 80px #814000, 0 0 100px 80px #e18484, 0 0 100px 80px #e86a6a, 0 0 100px 80px #d75555, 0 0 100px 80px #d34444, 0 0 100px 80px #d02828, 0 0 100px 80px #d21f1f, 0 0 100px 80px #ff0000, 0 0 150px 100px rgba(255, 255, 255, 0.3), 0 0 200px 120px rgba(255, 255, 255, 0.2); /* Additional shadow for more realism */
 	/* Add animation properties */
 	animation: rotateSun 10s linear infinite; /* Adjust duration and timing function as needed */
+	z-index: -1;
 }

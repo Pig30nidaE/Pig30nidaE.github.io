@@ -1,0 +1,81 @@
+@keyframes rotate-axis {
+	from {
+		transform: perspective(800px) rotateY(0deg);
+	}
+	to {
+		transform: perspective(800px) rotateY(0deg);
+	}
+}
+
+.post-satelites {
+    /*animation: rotate-axis 1s linear infinite;*/
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+    height: 3vh;
+    transform: perspective(800px);
+    transition: transform 1s ease;
+}
+
+.post-satelites li {
+    list-style: none;
+}
+
+.satelite {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    padding: 20px; /* 여유 공간 추가 */
+    transform: rotateY(calc(var(--i) * 1deg)) translateZ(350px);
+    /*background: url('/assets/bkg.png'), 0, 0;*/
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0, 0, 0, 0.6) 25%, rgba(9,9,9,1) 75%, rgba(0,0,0,1) 100%);
+}
+
+.satelite:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    /*transition: border-radius 1s ease, border 1s ease, box-shadow 1s ease, radical-gradient 1s ease;*/
+}
+
+/* 좌측 화살표 버튼 */
+.arrow-btn.left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+/* 우측 화살표 버튼 */
+.arrow-btn.right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+/* 화살표 아이콘 스타일 */
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transform: translate(10px, 10px); /* 화살표 아이콘을 버튼 가운데로 이동 */
+}
+
+
+
