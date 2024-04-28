@@ -3,8 +3,7 @@
 {% include head.html %}
 
 <body>
-  <div class="particles"></div>
-  <div class="shooting-star"></div>
+  
   <div id="wrapper">
     {% include header.html %}
     <div class="container">
@@ -35,7 +34,28 @@
     <span class="page-item">&raquo;</span>
     {% endif %}
   </div>
-  {% endif %} {% include footer.html %}
+  {% endif %}
+  <div class="shooting-star"></div>
+  <div class="stars"></div>
+  <div class="stars-highlights"></div>
+  <div class="particles"></div>
+  <svg class=filter xmlns="http://www.w3.org/2000/svg">
+    <filter id="stars">
+      <feTurbulence baseFrequency="0.275" />
+      <feColorMatrix values="0 0 0 9 -5
+                                 0 0 0 9 -4
+                                 0 0 0 9 -5
+                                 0 0 0 0 1" />
+    </filter>
+    <filter id="stars-highlights">
+      <feTurbulence baseFrequency="0.675" />
+      <feColorMatrix values="0 0 0 9 -5
+                                 0 0 0 9 -4
+                                 0 0 0 9 -5
+                                 0 0 0 0 1" />
+    </filter>
+  </svg>
+  {% include footer.html %}
 
   {% if site.google_analytics %}
     {% include analytics.html %}
