@@ -39,7 +39,7 @@ year : "2024"
 
 gems: [jekyll-paginate, jekyll-paginate-category]
 
-paginate: 5
+paginate: 4
 paginate_path: "page:num"
 
 # Analytics
