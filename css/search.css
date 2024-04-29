@@ -100,12 +100,16 @@
   border: none;
   line-height: 1.5;
   outline: none;
-  color: #b5e853; /* 글자 색상 변경 */
+  color: #6eedeb; /* 글자 색상 변경 */
   background-color: transparent; /* 배경 투명 */
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 24px;
   text-align: left;
   min-width: 50px; /* 최소 너비 지정 */
+}
+
+.results-container {
+  list-style: none;
 }
 
 @media (max-width: 485px) {

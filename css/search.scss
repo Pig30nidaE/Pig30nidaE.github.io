@@ -37,6 +37,10 @@ $body-foreground: $conifer !default;
     min-width: 50px; /* 최소 너비 지정 */
 }
 
+.results-container {
+    list-style: none;
+}
+
 @media (max-width: 485px) {
     .blog-title-container {
         display: flex;
