@@ -8,5 +8,14 @@
           url: categories/42seoul/born2code/Libft-(2)
     - name: La Piscine
       posts:
-- name: Example
+- name: Algorithm
+  subcategories:
+    - name: BOJ
+      -subcategories:
+        - name: bronze
+          posts:
+        - name: silver
+          post:
+        - name: gold
+          post:
   posts:
