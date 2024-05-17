@@ -1,12 +1,14 @@
 - name: 42Seoul
   subcategories:
-    - name: Born2code
+    - name: 42cursus
       posts:
         - title: Libft (1)
-          url: categories/42seoul/born2code/Libft-(1)
+          url: categories/42seoul/42cursus/Libft-(1)
         - title: Libft (2)
-          url: categories/42seoul/born2code/Libft-(2)
-    - name: La Piscine
+          url: categories/42seoul/42cursus/Libft-(2)
+        - title: CPP Module 09
+          url: categories/42seoul/42cursus/CPP Module 09 (1)
+    - name: C Piscine
       posts:
 - name: Algorithm
   subcategories:
