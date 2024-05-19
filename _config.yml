@@ -49,3 +49,10 @@ analytics:
   google:
     tracking_id          : "G-TXE91ESESY"
     anonymize_ip         : # true, false (default)
+
+  # Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
