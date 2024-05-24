@@ -76,47 +76,79 @@
    original: https://github.com/pages-themes/hacker 
 */
 .blog-title-container {
-  display: flex; /* 자식 요소들을 플렉스 항목으로 만듭니다. */
-  justify-content: center; /* 자식 요소들을 수평으로 중앙에 정렬합니다. */
+  display: flex;
+  flex-direction: column; /* 모바일에서 더 나은 정렬을 위해 컬럼 방향으로 변경 */
+  justify-content: center;
   align-items: center;
   white-space: normal;
+  padding: 10px; /* 전체 컨테이너에 패딩 추가 */
 }
 
-.blog-title a {
-  display: block;
-  color: inherit;
-  text-decoration: none;
+.blog-title {
+  margin-bottom: 10px; /* 제목과 검색 바 사이에 공간 추가 */
 }
 
 #search-bar {
-  display: inline-block; /* 검색 바를 인라인 블록 요소로 변경하여 중앙 정렬 가능 */
-  vertical-align: middle; /* 세로 가운데 정렬 */
-  margin-left: 10px; /* 왼쪽 마진 추가 */
-  white-space: nowrap;
+  display: flex; /* 플렉스 컨테이너로 변경하여 정렬 용이 */
+  justify-content: center;
   align-items: center;
+  width: 100%; /* 전체 너비 사용 */
 }
 
 #search-input {
   border: none;
   line-height: 1.5;
   outline: none;
-  color: #6eedeb; /* 글자 색상 변경 */
-  background-color: transparent; /* 배경 투명 */
+  color: #6eedeb;
+  background-color: transparent;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 24px;
+  font-size: 18px; /* 모바일에서 작은 폰트 크기로 조정 */
   text-align: left;
-  min-width: 50px; /* 최소 너비 지정 */
+  min-width: 50px;
+  flex: 1; /* 남은 공간을 차지하도록 설정 */
+}
+
+.fa-search {
+  margin-left: 10px; /* 검색 아이콘과 입력 필드 사이에 공간 추가 */
 }
 
 .results-container {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 485px) {
   .blog-title-container {
-    display: flex;
-    font-size: 16px; /* 모바일에서 작은 폰트 크기로 조정 */
-    white-space: normal; /* 텍스트 줄 바꿈 허용 */
+    font-size: 16px;
+    padding: 10px;
+    white-space: normal;
+  }
+  #search-input {
+    font-size: 16px; /* 모바일에서 더 작은 폰트 크기로 조정 */
+  }
+  .blog-title {
+    margin-bottom: 10px; /* 모바일에서 제목과 검색 바 사이에 공간 추가 */
+  }
+}
+@media (max-width: 485px) {
+  .blog-title-container {
+    flex-direction: column; /* 모바일에서 컬럼 방향으로 변경 */
+    align-items: flex-start; /* 요소들을 왼쪽 정렬 */
+  }
+  .blog-title a {
+    font-size: 18px; /* 제목 폰트 크기를 조정하여 모바일에서 더 잘 보이도록 */
+  }
+  #search-bar {
+    width: 100%; /* 검색 바가 전체 너비를 차지하도록 */
+  }
+  #search-input {
+    width: calc(100% - 30px); /* 입력 필드가 전체 너비를 차지하도록, 검색 아이콘 공간 제외 */
+    margin: 5px 0; /* 모바일에서 입력 필드 위아래에 여백 추가 */
+  }
+  .fa-search {
+    margin-left: 10px;
+    font-size: 18px; /* 모바일에서 검색 아이콘 크기를 조정 */
   }
 }
 
