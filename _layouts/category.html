@@ -1,49 +1,8 @@
 ---
 layout: default
 ---
-
-<!-- category.html -->
-
-<!-- category.html -->
-
-<!-- category.html -->
-
-
 <section>
   {% for category in site.data.categories %}
-      {% if category.posts or category.subcategories %}
-        <h2 class="{{ category.name }}">{{ category.name }}</h2>
-        {% for post_id in category.posts %}
-          {% assign post = site.posts | where: "title", post_id.title | first %}
-          <ul class="postinfo">
-            <li class="postinfo-{{ post.title }}">
-              <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time> - 
-              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-            </li>
-          </ul>
-        {% endfor %}
-      {% endif %}
-      {% if category.subcategories %}
-          {% for subcategory in category.subcategories %}
-              <ul class="{{ subcategory.name }}">
-                  {% if subcategory.posts %}
-                    <h3>{{ subcategory.name }}</h3>
-                  {% endif %}
-                  {% for post_id in subcategory.posts %}
-                      {% assign post = site.posts | where: "title", post_id.title | first %}
-                      <ul class="postinfo">
-                        <li class="postinfo-{{ post.title }}">
-                          <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time> - 
-                            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-                        </li>
-                      </ul>
-                  {% endfor %}
-              </ul>
-          {% endfor %}
-      {% endif %}
+    {% include category.html category=category %}
   {% endfor %}
 </section>
-
-
-  
-  
