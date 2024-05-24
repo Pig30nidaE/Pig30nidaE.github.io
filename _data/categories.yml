@@ -17,11 +17,13 @@
 - name: Algorithm
   subcategories:
     - name: BOJ
-      -subcategories:
+      subcategories:
         - name: bronze
           posts:
         - name: silver
-          post:
+          posts:
         - name: gold
-          post:
-  posts:
+          posts:
+            - title: BOJ 15683 - 감시
+              url: categories/BOJ/gold/BOJ 15683
+    
