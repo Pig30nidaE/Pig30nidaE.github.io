@@ -18,10 +18,6 @@
   subcategories:
     - name: BOJ
       subcategories:
-        - name: bronze
-          posts:
-        - name: silver
-          posts:
         - name: gold
           posts:
             - title: BOJ 15683 - 감시

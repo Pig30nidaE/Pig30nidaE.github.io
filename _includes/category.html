@@ -1,20 +1,36 @@
 <!-- _includes/category.html -->
-{% if include.category.posts or include.category.subcategories %}
-  <h2 class="{{ include.category.name }}">{{ include.category.name }}</h2>
-  {% for post_id in include.category.posts %}
-    {% assign post = site.posts | where: "title", post_id.title | first %}
-    <ul class="postinfo">
-      <li class="postinfo-{{ post.title }}">
-        <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time> - 
-        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-      </li>
-    </ul>
-  {% endfor %}
-  {% if include.category.subcategories %}
-    {% for subcategory in include.category.subcategories %}
-      <ul class="{{ subcategory.name }}">
-        {% include category.html category=subcategory %}
+<head>
+  <link rel="stylesheet" href="/css/category.css">
+  <link rel="stylesheet" href="/css/category.scss">
+</head>
+<div class="category">
+  <ul id="compositions-list" class="pure-tree main-tree">
+  <li>
+  <input type="checkbox" id="trigger-views" checked="checked">
+  <label for="trigger-views">{{ include.category.name }}</label>
+  <ul class="pure-tree">
+  {% if include.category.posts or include.category.subcategories %}
+    {% for post_id in include.category.posts %}
+      {% assign post = site.posts | where: "title", post_id.title | first %}
+              <li class="pure-tree_link">
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time> / 
+                {{ post.title }}</a>
+              </li>
+        {% endfor %}
+        {% if include.category.subcategories %}
+        {% for subcategory in include.category.subcategories %}
+        <!--<ul class="pure-tree">-->
+          <li>
+            <input type="checkbox" id="trigger-{{ subcategory }}">
+            <label for="trigger-base">{{ subcategory.name }}</label>
+              {% include category.html category=subcategory %}
+          </li>
+          <!--</ul>-->
+          {% endfor %}
+         {% endif %}
       </ul>
-    {% endfor %}
   {% endif %}
-{% endif %}
+</li>
+  </ul>
+</div>

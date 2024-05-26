@@ -47,44 +47,44 @@ $body-foreground: $conifer !default;
     margin: 0;
   }
   
-@media (max-width: 485px) {
-    .blog-title-container {
-      font-size: 16px;
-      padding: 10px;
-      white-space: normal;
-    }
+//@media (max-width: 485px) {
+//    .blog-title-container {
+//      font-size: 16px;
+//      padding: 10px;
+//      white-space: normal;
+//    }
   
-    #search-input {
-      font-size: 16px; /* 모바일에서 더 작은 폰트 크기로 조정 */
-    }
+//    #search-input {
+//      font-size: 16px; /* 모바일에서 더 작은 폰트 크기로 조정 */
+//    }
   
-    .blog-title {
-      margin-bottom: 10px; /* 모바일에서 제목과 검색 바 사이에 공간 추가 */
-    }
-  }
+//    .blog-title {
+//      margin-bottom: 10px; /* 모바일에서 제목과 검색 바 사이에 공간 추가 */
+//    }
+//  }
 
-  @media (max-width: 485px) {
-    .blog-title-container {
-      flex-direction: column; /* 모바일에서 컬럼 방향으로 변경 */
-      align-items: flex-start; /* 요소들을 왼쪽 정렬 */
-    }
+//  @media (max-width: 485px) {
+//    .blog-title-container {
+//      flex-direction: column; /* 모바일에서 컬럼 방향으로 변경 */
+//      align-items: flex-start; /* 요소들을 왼쪽 정렬 */
+//    }
   
-    .blog-title a {
-      font-size: 18px; /* 제목 폰트 크기를 조정하여 모바일에서 더 잘 보이도록 */
-    }
+//    .blog-title a {
+//      font-size: 18px; /* 제목 폰트 크기를 조정하여 모바일에서 더 잘 보이도록 */
+//    }
   
-    #search-bar {
-      width: 100%; /* 검색 바가 전체 너비를 차지하도록 */
-    }
+//    #search-bar {
+//      width: 100%; /* 검색 바가 전체 너비를 차지하도록 */
+//    }
   
-    #search-input {
-      width: calc(100% - 30px); /* 입력 필드가 전체 너비를 차지하도록, 검색 아이콘 공간 제외 */
-      margin: 5px 0; /* 모바일에서 입력 필드 위아래에 여백 추가 */
-    }
+//    #search-input {
+//      width: calc(100% - 30px); /* 입력 필드가 전체 너비를 차지하도록, 검색 아이콘 공간 제외 */
+//      margin: 5px 0; /* 모바일에서 입력 필드 위아래에 여백 추가 */
+//    }
   
-    .fa-search {
-      margin-left: 10px;
-      font-size: 18px; /* 모바일에서 검색 아이콘 크기를 조정 */
-    }
-  }
+//    .fa-search {
+//      margin-left: 10px;
+//      font-size: 18px; /* 모바일에서 검색 아이콘 크기를 조정 */
+//    }
+//  }
   
