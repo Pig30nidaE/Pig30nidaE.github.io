@@ -42,8 +42,6 @@ title: tags
 			{% for tag in tags %}
 				<span class="search-tag"> #{{ tag }}</span> &nbsp;
 			{% endfor %}
-			<span class="search-tag"> #sudo make me a sandwich</span>&nbsp;
-			<span class="search-tag"> #maxx "C"</span>&nbsp; <!-- finish tags -->
 		</ul>
 		<ul class="divider">
 			<hr class="divider"><br/>

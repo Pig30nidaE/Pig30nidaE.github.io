@@ -1,33 +1,4 @@
-var easterEggScript = document.createElement('script');
-easterEggScript.src = '/assets/js/easter-egg.js';
 
-easterEggScript.onload = function() {
-    // easter-egg.js가 완전히 로드된 후에 checkInput 함수를 호출합니다.
-    checkInput();
-};
-
-document.head.appendChild(easterEggScript);
-
-
-pathname = window.location.pathname;
-dir_name = pathname.split("/");
-if (dir_name[1] === "categories") {
-	if (dir_name.length > 2) {
-		if (dir_name[2] === "")
-			toInner = pathname.slice(0, pathname.length - 1);
-		else {
-			toInner = pathname.slice(11, pathname.length);
-		}
-	}
-	else {
-		toInner = pathname.slice(0, pathname.length - 1);
-	}
-}
-else {
-	toInner = pathname;
-}
-document.getElementById('current-path').innerText = toInner;
-// 페이지가 로드될 때 실행될 함수
 window.onload = function() {
 	// 검색 입력 요소 가져오기
 	var searchInput = document.getElementById('search-input');
@@ -45,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	searchInput.addEventListener('input', function() {
 		searchInput = document.getElementById('search-input');
 		var searchTerm = searchInput.value;
-        window.checkInput(searchTerm);
+        //window.checkInput(searchTerm);
 		searchInput.focus();
     });
 });
@@ -70,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		tag.addEventListener('click', function() {
 				var tagName = this.textContent.trim().substring(1); // Remove the leading '#' from the tag name
 				searchInput.value = tagName; // Set the value of the search input to the clicked tag name
-				window.checkInput(tagName);
+				//window.checkInput(tagName);
 				searchInput.dispatchEvent(new Event('input')); 
 				searchInput.focus();
 			});
