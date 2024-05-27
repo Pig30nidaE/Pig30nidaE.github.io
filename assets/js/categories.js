@@ -7,7 +7,6 @@ window.onload = function() {
 }
 
 // 카테고리 클릭시 이벤트 핸들러 등록
-// 카테고리 클릭시 이벤트 핸들러 등록
 var categoryLinks = document.querySelectorAll('.categories_time a');
 categoryLinks.forEach(function(link) {
     link.addEventListener('click', function(event) {

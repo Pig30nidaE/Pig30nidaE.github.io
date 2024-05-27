@@ -1,9 +1,10 @@
 ---
 layout: default
+use_math: true
 ---
 <ul>
     {% for post in paginator.posts %}
-      <li>
+      <li class="index-post-{{ post.title }}">
         <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
         <div class="icons_summary">
           <div class="categories_time">
@@ -24,7 +25,7 @@ layout: default
             | 
             <span class="material-icons">date_range</span>
             <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time>
-        </div>
+          </div>
         
           <p class="tags">
             <span class="material-symbols-outlined">sell</span>
@@ -37,10 +38,18 @@ layout: default
             {% endif %}
           </p>
         </div>
-        <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+        <!--<p>{{ post.content | strip_html | truncatewords:50 }}</p>-->
+        <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
 </ul>
 
 <script src="/assets/js/tags.js" type="text/javascript"></script>
 <script src="/assets/js/categories.js" type="text/javascript"></script>
+
+<style>
+  ul li {
+    list-style-type: none;
+    margin-bottom: 3.5em;
+  }
+</style>

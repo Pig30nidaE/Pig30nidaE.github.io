@@ -1,0 +1,69 @@
+/* 전체 CSS 코드 */
+.tree li {
+    list-style: none;
+}
+
+.custom-input {
+    display: none;
+}
+
+/* 커스텀 체크박스를 위한 코드 */
+.category-label .custom-label-checked {
+    display: none;
+}
+
+.custom-input:checked + .category-label .custom-label-checked {
+    display: inline-block;
+}
+
+.custom-input:checked + .category-label .custom-label-unchecked {
+    display: none;
+}
+
+/* 부드러운 효과를 위한 스타일 */
+.postinfo, .tree {
+    opacity: 1; /* 초기 투명도 설정 */
+    max-height: 1000px; /* 충분히 큰 값을 설정하여 요소가 항상 보이도록 함 */
+    overflow: hidden; /* 내용이 요소의 크기를 벗어나면 숨기기 */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out; /* opacity와 max-height가 부드럽게 변경되도록 트랜지션 추가 */
+}
+
+/* 클릭 시 요소 숨기기 */
+.custom-input:checked ~ .postinfo, .custom-input:checked ~ .tree {
+    opacity: 0;
+    max-height: 0;
+}
+
+/* 추가 스타일 */
+.tree {
+    text-align: left;
+}
+
+.postinfo {
+    margin-bottom: 0.5em;
+}
+
+.postinfo a {
+    padding: 1.5em 1.0em 0em 0;
+    border-radius: .2em;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    color: #B0B9C5;
+    border-bottom: 1px dashed #B0B9C5;
+    padding: 1.125em 1.125em 1.125em 0;
+}
+
+/* 호버 효과 */
+label:hover {
+    color: rgb(108, 140, 200);
+}
+
+.postinfo a:hover {
+    color: rgb(108, 140, 200);
+}
