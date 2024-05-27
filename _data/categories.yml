@@ -12,8 +12,6 @@
           url: categories/42seoul/42cursus/CPP Module 09 (2)
         - title: CPP Module 09 (3)
           url: categories/42seoul/42cursus/CPP Module 09 (3)
-    - name: C Piscine
-      posts:
 - name: Algorithm
   subcategories:
     - name: BOJ
