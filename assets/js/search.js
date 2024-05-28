@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '/search.json',
-        searchResultTemplate: '<li class="li-result"><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
+        searchResultTemplate: '<li class="li-result"><a href="{url}" title="{desc}">{title}</a></li>',
         noResultsText: '<li>No results found</li>',
         limit: 10000,
         fuzzy: false,
