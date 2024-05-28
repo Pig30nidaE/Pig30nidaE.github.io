@@ -14,14 +14,3 @@
 	<ul id="results-container"></ul>
 </h2>
 <!-- 페이지 상단 밑 링크 -->
-
-
-<script>
-	const searchInput = document.getElementById('search-input');
-	const resultsContainer = document.getElementById('results-container');
-	// 포커스가 사라질 때 결과창 숨기기
-	searchInput.addEventListener('blur', () => {
-		resultsContainer.classList.remove('active');
-	});
-	// 검색 입력란이 포커스를 잃었지만, 결과창 항목을 클릭했을 때 결과창이 닫히지 않도록 설정
-</script>

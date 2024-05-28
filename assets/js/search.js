@@ -4,13 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var resultsContainer = document.getElementById('results-container');
     var hashTags = document.querySelectorAll('#search-tag span');
     
-    header.addEventListener('click', function() {
-        searchInput.focus();
-    });
-
     searchInput.addEventListener('input', function() {
         var searchTerm = searchInput.value;
-        searchInput.focus();
 
         // 검색어가 있을 때만 결과를 보이게 함
         if (searchTerm.length > 0) {
@@ -27,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
             var tagName = this.textContent.trim().substring(1); // Remove the leading '#' from the tag name
             searchInput.value = tagName; // Set the value of the search input to the clicked tag name
             searchInput.dispatchEvent(new Event('input')); 
-            searchInput.focus();
         });
     });
 
