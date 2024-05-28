@@ -1,49 +1,44 @@
-
-window.onload = function() {
-	// 검색 입력 요소 가져오기
-	var searchInput = document.getElementById('search-input');
-};
 document.addEventListener('DOMContentLoaded', function() {
-    // 헤더 요소 가져오기
     var header = document.querySelector('header');
-	var searchInput = document.getElementById('search-input');
+    var searchInput = document.getElementById('search-input');
+    var resultsContainer = document.getElementById('results-container');
+    var hashTags = document.querySelectorAll('#search-tag span');
     
     header.addEventListener('click', function() {
-			searchInput = document.getElementById('search-input');
-		    searchInput.focus();
-		});
-		
-	searchInput.addEventListener('input', function() {
-		searchInput = document.getElementById('search-input');
-		var searchTerm = searchInput.value;
-        //window.checkInput(searchTerm);
-		searchInput.focus();
+        searchInput.focus();
     });
-});
 
-SimpleJekyllSearch({
-	searchInput: document.getElementById('search-input'),
-	resultsContainer: document.getElementById('results-container'),
-	json: '/search.json',
-	searchResultTemplate: '<a href="{url}" title="{desc}" target="_blank"><li>{title}</li></a>',
-	noResultsText: 'No results found',
-	limit: 10000,
-	fuzzy: false,
-	exclude: ['Welcome']
-});
+    searchInput.addEventListener('input', function() {
+        var searchTerm = searchInput.value;
+        searchInput.focus();
 
+        // 검색어가 있을 때만 결과를 보이게 함
+        if (searchTerm.length > 0) {
+            resultsContainer.classList.add('active');
+            resultsContainer.style.display = 'block';
+        } else {
+            resultsContainer.classList.remove('active');
+            resultsContainer.style.display = 'none';
+        }
+    });
 
-document.addEventListener('DOMContentLoaded', function() {
-	var searchInput = document.querySelector('#search-input');
-	var hashTags = document.querySelectorAll('#search-tag span');
-	
-	hashTags.forEach(function(tag) {
-		tag.addEventListener('click', function() {
-				var tagName = this.textContent.trim().substring(1); // Remove the leading '#' from the tag name
-				searchInput.value = tagName; // Set the value of the search input to the clicked tag name
-				//window.checkInput(tagName);
-				searchInput.dispatchEvent(new Event('input')); 
-				searchInput.focus();
-			});
-	});
+    hashTags.forEach(function(tag) {
+        tag.addEventListener('click', function() {
+            var tagName = this.textContent.trim().substring(1); // Remove the leading '#' from the tag name
+            searchInput.value = tagName; // Set the value of the search input to the clicked tag name
+            searchInput.dispatchEvent(new Event('input')); 
+            searchInput.focus();
+        });
+    });
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li class="li-result"><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
+        noResultsText: '<li>No results found</li>',
+        limit: 10000,
+        fuzzy: false,
+        exclude: ['Welcome']
+    });
 });
