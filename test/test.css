@@ -1,155 +1,67 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
-ol, ul {
-  list-style: none;
+.search {
+  display: table;
 }
 
-ul li {
-	list-style: none;
-}
-html {
-  line-height: 1;
-}
-
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-/* fontawesome */
-[class*="fa-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
-
-body {
-  /*font-family: 'Open Sans', sans-serif;*/
-  /*font-size: 16px;*/
-  font-weight: 300;
-  line-height: 1em;
-  text-align: center;
-  /*color: #444444;*/
-  /*background-color: #d0d0d0;*/
-}
-
-h1 {
-  font-size: 2.5em;
-  margin: 2em 0 1em;
+.search-input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 28px;
+    min-width: 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    line-height: 18px;
+    margin: 5px 0;
+    font-size: 14px;
+    -webkit-appearance: none;
+    font-family: 'Mukta Malar';
+    transition: all .6s ease;
+    cursor: pointer;
+    & + div {
+        position: relative;
+        height: 28px;
+        width: 100%;
+        margin: -28px 0 0 0;
+        svg {
+            display: block;
+            position: absolute;
+            height: 28px;
+            width: 160px;
+            right: 0;
+            top: 0;
+            fill: none;
+            stroke-width: 1.5px;
+            stroke-dashoffset: 212.908 + 59;
+            stroke-dasharray: 59 212.908;
+            transition: all .6s ease;
+        }
+    }
+    &:not(:placeholder-shown),
+    &:focus {
+        width: 160px;
+        padding: 0 4px;
+        cursor: text;
+        &+ div {
+            svg {
+                stroke-dasharray: 150 212.908;
+                stroke-dashoffset: 300;
+            }
+        }
+    }
 }
 
-h2 {
-  margin-bottom: 3em;
+::selection {
+  background: rgba(#fff, .2);
+}
+::-moz-selection {
+  background: rgba(#fff, .2);
 }
 
-em,
-strong {
-  font-weight: 700;
-}
-
-input {
-  display: none;
-}
-
-header p {
-  margin-bottom: 2em;
-}
-
-section {
-  margin-bottom: 2em;
-  padding: 0;
-}
-section:last-of-type {
-  margin-bottom: 0;
-}
-
-p {
-  line-height: 1.5em;
-}
-
-.container {
-  z-index: 1;
-  margin-bottom: 4em;
-}
-
-.pure-tree {
-  text-align: left;
-  display: block;
-}
-.pure-tree.main-tree {
-  width: 30em;
-  display: inline-block;
-}
-.pure-tree:not(.main-tree) {
-  padding-left: 1.2em;
-}
-.pure-tree:not(.main-tree) li {
-  overflow: hidden;
-  height: 0;
-  display: block;
-}
-.pure-tree label {
-  display: block;
-  cursor: pointer;
-  color: #aeb7c4;
-  border-bottom: 1px dashed #B0B9C5;
-  padding: 1.125em 1.125em 1.125em 0;
-}
-.pure-tree label:before {
-  width: 1em;
-  height: 1em;
-  line-height: 1em;
-  display: inline-block;
-  font-family: 'FontAwesome', sans-serif;
-  content: "\f114";
-  padding-right: .75em;
-}
-.pure-tree label:hover {
-  color: #434a58;
-  border-bottom-color: #434a58;
-}
-.pure-tree .pure-tree_link a {
-  padding: 1.500em 1.125em 0.750em 0;
-  display: block;
-  border-radius: .2em;
-  color: #717780;
-  text-decoration: none;
-}
-.pure-tree .pure-tree_link a:hover {
-  color: #434a58;
-}
-.pure-tree.nested {
-  padding-left: 1.7em;
-}
-.pure-tree [type="checkbox"] {
-  display: none;
-}
-.pure-tree [type="checkbox"]:checked + label {
-  color: #434a58;
-  border-bottom-color: #434a58;
-}
-.pure-tree [type="checkbox"]:checked ~ ul > li {
-  height: auto;
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+      box-sizing: inherit;
+  }
 }

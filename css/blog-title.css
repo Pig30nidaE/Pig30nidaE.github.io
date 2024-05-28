@@ -1,0 +1,21 @@
+.blog-title {
+	margin-bottom: 10px; /* 제목과 검색 바 사이에 공간 추가 */
+	padding: 10px;
+}
+
+.header-links {
+	text-align: center;
+	margin-bottom: 0%;
+	margin-left: 3%;
+  }
+  
+  .header-link {
+	display: inline-block;
+  }
+  
+  .header-link-border {
+	border-left: 2px solid #666;
+	height: 20px; /* 원하는 세로 길이로 조정하세요 */
+	margin: 0 10px; /* 세로 선 간격을 조정할 수 있습니다 */
+  }
+  
