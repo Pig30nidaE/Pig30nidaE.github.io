@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+	.container {
+	  padding-left: 1em; /* 모바일 좌측 패딩 */
+	  padding-right: 1em; /* 모바일 우측 패딩 */
+	}
+  }
