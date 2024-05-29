@@ -21,6 +21,8 @@ $blockquote-border: $dove-grey !default;
 html {
   scroll-behavior: smooth;
   font-family: 'NEXON Lv2 Gothic';
+  word-break: break-all; /* 단어를 중간에서 줄 바꿈 */
+  white-space: normal;  /* 기본적으로 줄 바꿈을 허용 */
 }
 
 body {
@@ -173,6 +175,13 @@ pre {
   text-wrap: normal;
   overflow: auto;
   overflow-y: hidden;
+  white-space: pre-wrap; /* 줄 바꿈을 허용 */
+  word-wrap: break-word; /* 길게 늘어지는 단어를 줄 바꿈 */
+}
+
+code {
+  white-space: pre-wrap; /* 줄 바꿈을 허용 */
+  word-wrap: break-word; /* 길게 늘어지는 단어를 줄 바꿈 */
 }
 
 code.highlighter-rouge {
