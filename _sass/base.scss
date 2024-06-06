@@ -256,7 +256,7 @@ hr {
 */
 
 a {
-  color: #EEEEEE;;
+  color: #EEEEEE;
   text-decoration-line: none;
 }
 
@@ -298,6 +298,9 @@ a:active, a:focus {
   font-weight: initial;
 }
 
+.post-title {
+  color: #EEEEEE;
+}
 
 .post-article {
   padding-top: 2rem;
