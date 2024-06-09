@@ -1,17 +1,17 @@
-- name: 42Seoul
+- name: 42seoul
   subcategories:
     - name: 42cursus
       posts:
         - title: Libft (1)
-          url: categories/42Seoul/42cursus/Libft-(1)
+          url: categories/42seoul/42cursus/Libft-(1)
         - title: Libft (2)
-          url: categories/42Seoul/42cursus/Libft-(2)
+          url: categories/42seoul/42cursus/Libft-(2)
         - title: CPP Module 09 (1)
-          url: categories/42Seoul/42cursus/CPP Module 09 (1)
+          url: categories/42seoul/42cursus/CPP Module 09 (1)
         - title: CPP Module 09 (2)
-          url: categories/42Seoul/42cursus/CPP Module 09 (2)
+          url: categories/42seoul/42cursus/CPP Module 09 (2)
         - title: CPP Module 09 (3)
-          url: categories/42Seoul/42cursus/CPP Module 09 (3)
+          url: categories/42seoul/42cursus/CPP Module 09 (3)
 - name: Algorithm
   subcategories:
     - name: BOJ

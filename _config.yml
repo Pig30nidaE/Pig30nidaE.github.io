@@ -22,8 +22,8 @@ defaults:
       layout: "post"
 
 menu:
-  - title: 42Seoul
-    url:   /42Seoul/
+  - title: 42seoul
+    url:   /42seoul/
 
 future: true
 plugins:
