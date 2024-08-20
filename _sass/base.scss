@@ -310,6 +310,10 @@ a:active, a:focus {
   font-size: 18px;
 }
 
+.post-article a {
+  text-decoration: underline;
+}
+
 .pagination_prev_next {
   &--pager {
   margin-top: 0em;
