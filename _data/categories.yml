@@ -12,6 +12,8 @@
           url: categories/42seoul/42cursus/CPP Module 09 (2)
         - title: CPP Module 09 (3)
           url: categories/42seoul/42cursus/CPP Module 09 (3)
+        - title: ft_transcendence (1)
+          url: categories/42seoul/42cursus/ft_transcendence (1)
 - name: Algorithm
   subcategories:
     - name: BOJ
