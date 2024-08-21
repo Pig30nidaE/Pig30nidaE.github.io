@@ -21,11 +21,11 @@
         - name: silver
           posts:
           - title: BOJ 11727 - 2×n 타일링 2
-            url: categories/BOJ/silver/BOJ 11727
+            url: categories/Algorithm/BOJ/silver/BOJ 11727
           - title: BOJ 15815 - 천재 수학자 성필
-            url: categories/BOJ/silver/BOJ 15815
+            url: categories/Algorithm/BOJ/silver/BOJ 15815
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
-              url: categories/BOJ/gold/BOJ 15683
+              url: categories/Algorithm/BOJ/gold/BOJ 15683
     
