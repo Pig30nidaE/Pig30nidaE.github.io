@@ -18,12 +18,22 @@
   subcategories:
     - name: BOJ
       subcategories:
+        - name: bronze
+          posts:
+          - title: BOJ 2577 - 숫자의 개수
+            url: categories/Algorithm/BOJ/bronze/BOJ 2577
         - name: silver
           posts:
           - title: BOJ 11727 - 2×n 타일링 2
             url: categories/Algorithm/BOJ/silver/BOJ 11727
           - title: BOJ 15815 - 천재 수학자 성필
             url: categories/Algorithm/BOJ/silver/BOJ 15815
+          - title: BOJ 1475 - 방 번호
+            url: categories/Algorithm/BOJ/silver/BOJ 1475
+          - title: BOJ 3273 - 두 수의 합
+            url: categories/Algorithm/BOJ/silver/BOJ 3273
+          - title: BOJ 5397 - 키로거
+            url: categories/Algorithm/BOJ/silver/BOJ 5397
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
