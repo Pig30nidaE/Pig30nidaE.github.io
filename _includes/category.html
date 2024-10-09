@@ -30,13 +30,11 @@
       </ul>
     {% endfor %}
     {% if include.category.subcategories %}
-      <ul class="tree">
-      {% for subcategory in include.category.subcategories %}
-          <li>
+    {% for subcategory in include.category.subcategories %}
+    <ul class="tree">
             <li class="subcategory {{ subcategory.name }}">{% include category.html category=subcategory %}</li>
-          </li>
-          {% endfor %}
-      </ul>
+        </ul>
+        {% endfor %}
     {% endif %}
   </li>
   {% endif %}

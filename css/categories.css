@@ -3,6 +3,7 @@
     list-style: none;
 }
 
+
 .custom-input {
     display: none;
 }
@@ -23,8 +24,8 @@
 /* 부드러운 효과를 위한 스타일 */
 .postinfo, .tree {
     opacity: 1; /* 초기 투명도 설정 */
-    max-height: 1000px; /* 충분히 큰 값을 설정하여 요소가 항상 보이도록 함 */
-    overflow: hidden; /* 내용이 요소의 크기를 벗어나면 숨기기 */
+    max-height: 1000px;
+    overflow: hidden;
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out; /* opacity와 max-height가 부드럽게 변경되도록 트랜지션 추가 */
 }
 
@@ -37,10 +38,6 @@
 /* 추가 스타일 */
 .tree {
     text-align: left;
-}
-
-.postinfo {
-    margin-bottom: 0.5em;
 }
 
 .postinfo a {
@@ -56,7 +53,7 @@ label {
     cursor: pointer;
     color: #B0B9C5;
     border-bottom: 1px dashed #B0B9C5;
-    padding: 1.125em 1.125em 1.125em 0;
+    padding: 1.125em 1.125em 1.125em 1.125em;
 }
 
 /* 호버 효과 */
