@@ -40,6 +40,8 @@
             url: categories/Algorithm/BOJ/silver/BOJ 1158
           - title: BOJ 1874 - 스택 수열
             url: categories/Algorithm/BOJ/silver/BOJ 1874
+          - title: BOJ 18258 - 큐 2
+            url: categories/Algorithm/BOJ/silver/BOJ 18258
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
