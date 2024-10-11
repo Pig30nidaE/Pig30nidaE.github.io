@@ -40,6 +40,14 @@
             url: categories/Algorithm/BOJ/silver/BOJ 1158
           - title: BOJ 1874 - 스택 수열
             url: categories/Algorithm/BOJ/silver/BOJ 1874
+          - title: BOJ 1021 - 회전하는 큐
+            url: categories/Algorithm/BOJ/silver/BOJ 1021
+          - title: BOJ 2164 - 카드2
+            url: categories/Algorithm/BOJ/silver/BOJ 2164
+          - title: BOJ 3986 - 좋은 단어
+            url: categories/Algorithm/BOJ/silver/BOJ 3986
+          - title: BOJ 10799 - 쇠막대기
+            url: categories/Algorithm/BOJ/silver/BOJ 10799
           - title: BOJ 18258 - 큐 2
             url: categories/Algorithm/BOJ/silver/BOJ 18258
         - name: gold
