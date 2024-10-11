@@ -4,18 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var resultsContainer = document.getElementById('results-container');
     var hashTags = document.querySelectorAll('#search-tag span');
     
-    // searchInput.addEventListener('input', function() {
-    //     var searchTerm = searchInput.value;
-
-    //     // 검색어가 있을 때만 결과를 보이게 함
-    //     if (searchTerm.length > 0) {
-    //         resultsContainer.classList.add('active');
-    //         resultsContainer.style.display = 'block';
-    //     } else {
-    //         resultsContainer.classList.remove('active');
-    //         resultsContainer.style.display = 'none';
-    //     }
-    // });
     searchInput.addEventListener('focus', function() {
         var searchTerm = searchInput.value;
 
