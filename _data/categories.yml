@@ -24,6 +24,8 @@
             url: categories/Algorithm/BOJ/bronze/BOJ 2577
         - name: silver
           posts:
+          - title: BOJ 10773 - 제로
+            url: categories/Algorithm/BOJ/silver/BOJ 10773
           - title: BOJ 11727 - 2×n 타일링 2
             url: categories/Algorithm/BOJ/silver/BOJ 11727
           - title: BOJ 15815 - 천재 수학자 성필
@@ -34,6 +36,10 @@
             url: categories/Algorithm/BOJ/silver/BOJ 3273
           - title: BOJ 5397 - 키로거
             url: categories/Algorithm/BOJ/silver/BOJ 5397
+          - title: BOJ 1158 - 요세푸스 문제
+            url: categories/Algorithm/BOJ/silver/BOJ 1158
+          - title: BOJ 1874 - 스택 수열
+            url: categories/Algorithm/BOJ/silver/BOJ 1874
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
