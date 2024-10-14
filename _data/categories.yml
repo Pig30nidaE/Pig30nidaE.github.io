@@ -50,6 +50,8 @@
             url: categories/Algorithm/BOJ/silver/BOJ 10799
           - title: BOJ 18258 - 큐 2
             url: categories/Algorithm/BOJ/silver/BOJ 18258
+          - title: BOJ 1012 - 유기농 배추
+            url: categories/Algorithm/BOJ/silver/BOJ 1012
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
@@ -58,4 +60,8 @@
               url: categories/Algorithm/BOJ/gold/BOJ 5430
             - title: BOJ 2493 - 탑
               url: categories/Algorithm/BOJ/gold/BOJ 2493
+            - title: BOJ 10026 - 적록색약
+              url: categories/Algorithm/BOJ/gold/BOJ 10026
+            - title: BOJ 7569 - 토마토
+              url: categories/Algorithm/BOJ/gold/BOJ 7569
     
