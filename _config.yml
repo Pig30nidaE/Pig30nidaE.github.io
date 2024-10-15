@@ -30,6 +30,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-last-modified-at
+
+last-modified-at:
+  date-format: '%Y:%B:%A:%d:%S:%R'
 
 # Optional. The default date format, used if none is specified in the tag.
 
