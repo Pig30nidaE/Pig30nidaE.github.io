@@ -52,6 +52,8 @@
             url: categories/Algorithm/BOJ/silver/BOJ 18258
           - title: BOJ 1012 - 유기농 배추
             url: categories/Algorithm/BOJ/silver/BOJ 1012
+          - title: BOJ 7562 - 나이트의 이동
+            url: categories/Algorithm/BOJ/silver/BOJ 7562
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
