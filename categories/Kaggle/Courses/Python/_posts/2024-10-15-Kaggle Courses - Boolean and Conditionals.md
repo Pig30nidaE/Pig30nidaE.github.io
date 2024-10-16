@@ -7,7 +7,7 @@ date: 2024-10-15-16:45:39
 use_math: true
 ---
 # 이전 글
-[Kaggle Courses - Functions and Getting Help](/categories/Kaggle/Courses/Python/Kaggle-Courses-Functions-and-Getting-Help)
+[Kaggle Courses - Functions and Getting Help](/categories/kaggle/courses/python/Kaggle-Courses-Functions-and-Getting-Help)
 
 
 # Exercise
