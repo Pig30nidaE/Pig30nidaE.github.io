@@ -64,4 +64,12 @@
               url: categories/Algorithm/BOJ/gold/BOJ 10026
             - title: BOJ 7569 - 토마토
               url: categories/Algorithm/BOJ/gold/BOJ 7569
-    
+- name: Kaggle
+  subcategories:
+    - name: Courses
+      subcategories: 
+        - name: Python
+          posts:
+          - title: Kaggle Courses - Hello, Python
+            url: categories/Kaggle/Courses/Kaggle Courses - Hello, Python
+          
