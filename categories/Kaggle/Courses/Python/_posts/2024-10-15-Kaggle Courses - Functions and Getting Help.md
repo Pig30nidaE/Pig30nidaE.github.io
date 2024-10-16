@@ -6,7 +6,7 @@ tags: [Kaggle, Courses, Python]
 date: 2024-10-15
 ---
 # 이전 글
-[Kaggle Courses - Hello, Python](/categories/kaggle/courses/python/Kaggle-Courses-Hello,-Python)
+[Kaggle Courses - Hello, Python](./2024-10-14-Kaggle Courses - Hello, Python)
 
 # Exercise
 ## 1.
