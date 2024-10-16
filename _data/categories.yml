@@ -72,4 +72,8 @@
           posts:
           - title: Kaggle Courses - Hello, Python
             url: categories/Kaggle/Courses/Kaggle Courses - Hello, Python
+          - title: Kaggle Courses - Functions and Getting Help
+            url: categories/Kaggle/Courses/Kaggle Courses - Functions and Getting Help
+          - title: Kaggle Courses - Boolean and Conditionals
+            url: categories/Kaggle/Courses/Kaggle Courses - Boolean and Conditionals
           
