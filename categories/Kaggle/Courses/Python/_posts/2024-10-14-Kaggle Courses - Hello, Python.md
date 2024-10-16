@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Kaggle Courses - Hello, Python
-excerpt: "Kaggle - Learn - Courses - Hello, Python 정리"
-tags: [Kaggle, Python]
+excerpt: "Kaggle - Learn - Courses - Python - Hello, Python 정리"
+tags: [Kaggle, Courses, Python]
 date: 2024-10-14
 ---
 
 # 시작하기 전에...
 알고리즘 문제를 풀면서 Kaggle의 Learn탭에 있는 Courses를 병행하기로 했다.  
   
-제일 처음에 있는 강의는 Intro to Programming 인데, 생략하기로 결정했다. Hello, Python도 생략하려다가 그래도 한 번 들어보자는 생각에 시작한다. 다만, Hello, Python같은 경우는 Exercise위주로 정리하려고 한다.
+제일 처음에 있는 강의는 Intro to Programming 인데, 생략하기로 결정했다. Hello, Python도 생략하려다가 그래도 한 번 들어보자는 생각에 시작한다. 다만, Python같은 경우는 Exercise위주로 정리하려고 한다.
 
 # Exercise
 ## 0.
-문제:  
+
   
 This is a silly question intended as an introduction to the format we use for hands-on exercises throughout all Kaggle courses.
 
@@ -27,8 +27,10 @@ To complete this question, create a variable called color in the cell below with
 # Check your answer
 q0.check()
 ```
-  
-답:  
+
+<details>
+<summary> 정답 </summary>
+<div markdown="1">
   
 ```python
 # create a variable called color with an appropriate value on the line below
@@ -40,8 +42,11 @@ color = 'blue'
 # Check your answer
 q0.check()
 ```
+</div>
+</details>
+
 ## 1.
-문제:  
+
 Complete the code below. In case it's helpful, here is the table of available arithmetic operations:  
 
 |Operator|Name|Description|
@@ -68,8 +73,10 @@ ____
 # Check your answer
 q1.check()
 ```
-  
-답:
+<details>
+<summary> 정답 </summary>
+<div markdown="1">
+
 ```python
 pi = 3.14159 # approximate
 diameter = 3
@@ -83,9 +90,11 @@ area = (radius ** 2) * pi
 # Check your answer
 q1.check()
 ```
+</div>
+</details> 
 
 ## 2.
-문제:  
+
 Add code to the following cell to swap variables a and b (so that a refers to the object previously referred to by b and vice versa).
 ```python
 ########### Setup code - don't touch this part ######################
@@ -106,8 +115,10 @@ q2.store_original_ids()
 # Check your answer
 q2.check()
 ```
-  
-답:  
+<details>
+<summary> 정답 </summary>
+<div markdown="1">
+
 ```python
 ########### Setup code - don't touch this part ######################
 # If you're curious, these are examples of lists. We'll talk about 
@@ -125,21 +136,28 @@ a, b = b, a
 # Check your answer
 q2.check()
 ```
+</div>
+</details>
 
 ## 3a.
-문제:  
+
 Add parentheses to the following expression so that it evaluates to 1.
 ```python
 5 - 3 // 2
 ```
   
-답:  
+<details>
+<summary> 정답 </summary>
+<div markdown="1">
+
 ```python
 (5 - 3) // 2
 ```
+</div>
+</details>
 
 ## 3b.
-문제:  
+
 Questions, like this one, marked a spicy pepper are a bit harder.
 
 Add parentheses to the following expression so that it evaluates to 0.
@@ -147,13 +165,18 @@ Add parentheses to the following expression so that it evaluates to 0.
 ```python
 8 - 3 * 2 - 1 + 1
 ```
-  
-답:
+<details>
+<summary> 정답 </summary>
+<div markdown="1">
+
 ```python
 8 - (3 * 2) - (1 + 1)
 ```
+</div>
+</details>
 
 ## 4.
+
 Alice, Bob and Carol have agreed to pool their Halloween candy and split it evenly among themselves. For the sake of their friendship, any candies left over will be smashed. For example, if they collectively bring home 91 candies, they'll take 30 each and smash 1.  
   
 Write an arithmetic expression below to calculate how many candies they must smash for a given haul.
@@ -171,7 +194,10 @@ to_smash = -1
 q4.check()
 ```
   
-답:  
+<details>
+<summary> 정답 </summary>
+<div markdown="1">
+
 ```python
 # Variables representing the number of candies collected by alice, bob, and carol
 alice_candies = 121
@@ -185,3 +211,5 @@ to_smash = (alice_candies + bob_candies + carol_candies) % 3
 # Check your answer
 q4.check()
 ```
+</div>
+</details>

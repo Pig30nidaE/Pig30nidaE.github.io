@@ -67,7 +67,9 @@
 - name: Kaggle
   subcategories:
     - name: Courses
-      posts:
-        - title: Kaggle Courses - Hello, Python
-          url: categories/Kaggle/Courses/Kaggle Courses - Hello, Python
+      subcategories: 
+        - name: Python
+          posts:
+          - title: Kaggle Courses - Hello, Python
+            url: categories/Kaggle/Courses/Kaggle Courses - Hello, Python
           
