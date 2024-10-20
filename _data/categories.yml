@@ -66,6 +66,12 @@
               url: categories/Algorithm/BOJ/gold/BOJ 10026
             - title: BOJ 7569 - 토마토
               url: categories/Algorithm/BOJ/gold/BOJ 7569
+            - title: BOJ 2206 - 벽 부수고 이동하기
+              url: categories/Algorithm/BOJ/gold/BOJ 2206
+            - title: BOJ 2573 - 빙산
+              url: categories/Algorithm/BOJ/gold/BOJ 2573
+            - title: BOJ 2146 - 다리 만들기
+              url: categories/Algorithm/BOJ/gold/BOJ 2146
 - name: Kaggle
   subcategories:
     - name: Courses
