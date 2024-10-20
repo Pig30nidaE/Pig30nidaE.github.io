@@ -70,6 +70,8 @@
               url: categories/Algorithm/BOJ/gold/BOJ 2206
             - title: BOJ 2573 - 빙산
               url: categories/Algorithm/BOJ/gold/BOJ 2573
+            - title: BOJ 2146 - 다리 만들기
+              url: categories/Algorithm/BOJ/gold/BOJ 2146
 - name: Kaggle
   subcategories:
     - name: Courses
