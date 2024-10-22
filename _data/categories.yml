@@ -86,4 +86,8 @@
             url: categories/Kaggle/Courses/Kaggle Courses - Boolean and Conditionals
           - title: Kaggle Courses - Lists
             url: categories/Kaggle/Courses/Kaggle Courses - Lists
+          - title: Kaggle Courses - Loops and List Comprehensions
+            url: categories/Kaggle/Courses/Kaggle Courses - Loops and List Comprehensions
+          - title: Kaggle Courses - Strings and Dictionaries
+            url: categories/Kaggle/Courses/Kaggle Courses - Strings and Dictionaries
           

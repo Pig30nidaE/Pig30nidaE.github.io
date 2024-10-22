@@ -289,6 +289,22 @@ a:active, a:focus {
   text-align: center;
 }
 
+.page-item {
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    text-decoration: none;
+  }
+  
+  .page-item:hover {
+    color:rgb(108, 140, 200); /* 페이지 링크에 마우스 오버 시 색상 변경 */
+  }
+  
+  .page-item.current {
+    color:rgb(108, 140, 200); /* 현재 페이지 번호 색상 (예: 주황색) */
+    font-weight: bold; /* 강조를 위해 굵게 */
+  }
+  
+
 #wrapper {
   min-height: calc(100vh - 100px);
 }
