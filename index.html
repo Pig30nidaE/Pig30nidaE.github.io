@@ -8,27 +8,29 @@ use_math: true
       <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
       <div class="icons_summary">
         <div class="categories_time">
-          <span class="material-symbols-outlined">folder_open</span>
-          {% if post.categories.size > 0 %}
-              {% assign categories = post.categories %}
-              {% assign path = '' %}
-              {% for category in categories offset:1 %}
-                  {% assign path = path | append: category | slugify %}
-                  {% if forloop.first %}
-                      <a href="/categories#{{ path }}" data-category="{{ path }}">{{ category }}</a>
-                  {% else %}
-                      / <a href="/categories#{{ path }}" data-category="{{ path }}">{{ category }}</a>
-                  {% endif %}
-                  {% assign path = path | append: '/' %}
-              {% endfor %}
-          {% else %}
-              No category
-          {% endif %}
-          | 
-          <span class="material-icons">date_range</span>
-          <time datetime="{{ post.date | date_to_xmlschema }}">last modified at {{ post.last_modified_at | date_to_string }}</time> / created at
-          <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time>
-        </div>
+            <span class="material-symbols-outlined">folder_open</span>
+            {% if post.categories.size > 0 %}
+                {% assign categories = post.categories %}
+                {% assign path = '' %}
+                {% for category in categories offset:1 %}
+                    {% assign formatted_category = category | downcase | replace: ' ', '_' %}
+                    {% assign path = path | append: formatted_category %}
+                    {% if forloop.first %}
+                        <a href="/categories#{{ path }}" data-category="{{ path }}">{{ category }}</a>
+                    {% else %}
+                        / <a href="/categories#{{ path }}" data-category="{{ path }}">{{ category }}</a>
+                    {% endif %}
+                    {% assign path = path | append: '-' %}
+                {% endfor %}
+            {% else %}
+                No category
+            {% endif %}
+            | 
+            <span class="material-icons">date_range</span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">last modified at {{ post.last_modified_at | date_to_string }}</time> / created at
+            <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time>
+          </div>
+          
       
         <p class="tags">
           <span class="material-symbols-outlined">sell</span>
