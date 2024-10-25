@@ -3,8 +3,11 @@ window.onload = function() {
     if (window.location.hash) {
         var categoryId = window.location.hash.substring(1); // 앵커에서 '#' 제거
         
-        // categoryId를 하이픈(-)을 기준으로 분리
-        var ids = categoryId.split('-');
+        // ~을 기준으로 분리하고 각 부분의 띄어쓰기를 복원
+        var ids = categoryId.split('-').map(function(id) {
+            return id.replace(/_/g, '-');
+        });
+        console.log(ids);
 
         // 각 부분을 사용하여 체크박스를 찾고 언체크
         ids.forEach(function(id, index) {
@@ -19,7 +22,7 @@ window.onload = function() {
                         checkbox.checked = false;
                     }, 200); // 애니메이션이 끝날 때까지 기다림 (0.5초)
                 }
-            }, index * 200); // 체크박스마다 1초 간격으로 애니메이션 적용
+            }, index * 200); // 체크박스마다 200ms 간격으로 애니메이션 적용
         });
     }
 }
