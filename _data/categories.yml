@@ -92,4 +92,8 @@
             url: categories/Kaggle/Courses/Kaggle Courses - Strings and Dictionaries
           - title: Kaggle Courses - Working with External Libraries
             url: categories/Kaggle/Courses/Kaggle Courses - Working with External Libraries
+        - name: Intro to Machine Learning
+          posts: 
+          - title: Kaggle Courses - How Models Work
+            url: categories/Kaggle/Courses/Kaggle Courses - How Models Work
           
