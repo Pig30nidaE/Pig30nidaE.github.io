@@ -96,4 +96,6 @@
           posts: 
           - title: Kaggle Courses - How Models Work
             url: categories/Kaggle/Courses/Kaggle Courses - How Models Work
+          - title: Kaggle Courses - Basic Data Exploration
+            url: categories/Kaggle/Courses/Kaggle Courses - Basic Data Exploration
           
