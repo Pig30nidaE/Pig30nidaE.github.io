@@ -12,13 +12,14 @@ layout: default
         {% assign categories = page.categories %}
         {% assign path = '' %}
         {% for category in categories offset:1 %}
-            {% assign path = path | append: category | slugify %}
+            {% assign formatted_category = category | downcase | replace: ' ', '_' %}
+            {% assign path = path | append: formatted_category %}
             {% if forloop.first %}
                 <a href="/categories#{{ path }}" data-category="{{ path }}">{{ category }}</a>
             {% else %}
                 / <a href="/categories#{{ path }}" data-category="{{ path }}">{{ category }}</a>
             {% endif %}
-            {% assign path = path | append: '/' %}
+            {% assign path = path | append: '-' %}
         {% endfor %}
     {% else %}
         No category
