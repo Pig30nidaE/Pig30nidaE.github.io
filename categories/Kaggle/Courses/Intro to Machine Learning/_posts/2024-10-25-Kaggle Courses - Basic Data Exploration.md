@@ -34,7 +34,7 @@ melbourne_data.describe()
   
 두 번째 값인 **mean** 은 평균을 의미한다. **std**는 수치적으로 얼마나 분포되어 있는지 측정하는 표준 편차이다. 그 다음의 퍼센트에이지에 따라 각 수치값이 오름차순이다. **max**가 가장 큰 값이다.
 
-# Exercise
+# Exercises
 
 ## Step 1: Loading Data
 Read the Iowa data file into a Pandas DataFrame called `home_data`.
