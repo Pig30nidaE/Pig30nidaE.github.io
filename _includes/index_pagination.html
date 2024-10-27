@@ -1,0 +1,53 @@
+<head>
+    <link rel="href" href="/css/index-pagination.scss">
+</head>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page == 1 %}
+  <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
+  {% elsif paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
+  {% else %}
+  <span class="page-item">&laquo;</span>
+  {% endif %}
+
+  {% assign total_pages = paginator.total_pages %}
+  {% assign current_page = paginator.page %}
+  {% assign max_display = 7 %}
+  
+  {% assign half_range = max_display | divided_by: 2 %}
+  {% assign start_page = current_page | minus: half_range %}
+  {% assign end_page = current_page | plus: half_range %}
+  
+  {% if start_page < 1 %}
+    {% assign start_page = 1 %}
+    {% assign end_page = max_display %}
+  {% endif %}
+  
+  {% if end_page > total_pages %}
+    {% assign end_page = total_pages %}
+    {% assign start_page = end_page | minus: max_display | plus: 1 %}
+    {% if start_page < 1 %}
+      {% assign start_page = 1 %}
+    {% endif %}
+  {% endif %}
+  
+  {% for page in (start_page..end_page) %}
+    {% if page == current_page %}
+      <span class="page-item current">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+  
+
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&raquo;</a>
+  {% else %}
+  <span class="page-item">&raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
