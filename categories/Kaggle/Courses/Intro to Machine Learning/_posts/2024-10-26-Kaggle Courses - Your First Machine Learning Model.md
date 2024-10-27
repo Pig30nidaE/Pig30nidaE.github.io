@@ -89,7 +89,7 @@ print(melbourne_model.predict(X.head()))
 ```
 ![model prediction](/assets/Kaggle/Courses/modelPrediction.png)
 
-# Execise
+# Execises
 ## Step 1: Specify Prediction Target
 Select the target variable, which corresponds to the sales price. Save this to a new variable called `y`. You'll need to print a list of the columns to find the name of the column you need.
 ```python
