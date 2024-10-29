@@ -1,18 +1,20 @@
+# 기본 설정
 title: Pig30nidaE's Blog
 description: "이것 저것 기록하는 블로그"
 author:
   name: "Pig30nidaE"
   email: "nope"
-  url: "https://Pig30nidaE/github.io"
+  url: "https://Pig30nidaE.github.io"
 
-baseurl: /
+baseurl: "/"
 
 source: .
 destination: ./_site
 permalink: /:categories/:title
-paginate: 3
-paginate_path: /page/:num/
+paginate: 4
+paginate_path: "/page/:num/"
 
+# 기본 레이아웃 설정
 defaults:
   -
     scope:
@@ -21,10 +23,12 @@ defaults:
     values:
       layout: "post"
 
+# 메뉴 설정
 menu:
   - title: 42seoul
-    url:   /42seoul/
+    url: /42seoul/
 
+# 기타 설정
 future: true
 plugins:
   - jekyll-seo-tag
@@ -35,16 +39,17 @@ plugins:
 last-modified-at:
   date-format: '%Y:%B:%A:%d:%S:%R'
 
-# Optional. The default date format, used if none is specified in the tag.
-
 # Custom variables
 owner : "Pig30nidaE"
 year : "2024"
 
-gems: [jekyll-paginate, jekyll-paginate-category]
+# 마크다운 및 하이라이터 설정
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-paginate: 4
-paginate_path: "page:num"
 
 # Analytics
 analytics:
@@ -53,10 +58,3 @@ analytics:
   google:
     tracking_id          : "G-TXE91ESESY"
     anonymize_ip         : # true, false (default)
-
-  # Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
