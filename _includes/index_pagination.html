@@ -1,6 +1,6 @@
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
-    <a href="{{ site.baseurl }}" class="page-item">&laquo;</a> 
+    <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
 
   {% assign total_pages = paginator.total_pages %}
   {% assign current_page = paginator.page %}
