@@ -6,13 +6,13 @@ author:
   email: "nope"
   url: "https://Pig30nidaE.github.io"
 
-baseurl: "/"
+baseurl: /
 
 source: .
 destination: ./_site
 permalink: /:categories/:title
 paginate: 4
-paginate_path: "/page/:num/"
+paginate_path: /page/:num/
 
 # 기본 레이아웃 설정
 defaults:
@@ -22,11 +22,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
-# 메뉴 설정
-menu:
-  - title: 42seoul
-    url: /42seoul/
 
 # 기타 설정
 future: true
