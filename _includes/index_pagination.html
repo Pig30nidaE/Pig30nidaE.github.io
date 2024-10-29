@@ -32,7 +32,8 @@
       <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
     {% endif %}
   {% endfor %}
-  <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' | append: 'page' | append: total_pages/ }}" class="page-item">&raquo;</a> 
-  {% endif %}
-    
+  
+  
+  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', total_pages }}" class="page-item">&raquo;</a> 
+{% endif %}
 </div>
