@@ -56,6 +56,8 @@
             url: categories/Algorithm/BOJ/silver/BOJ 7562
           - title: BOJ 17478 - 재귀함수가 뭔가요?
             url: categories/Algorithm/BOJ/silver/BOJ 17478
+          - title: BOJ 1780 - 종이의 개수
+            url: categories/Algorithm/BOJ/silver/BOJ 1780
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
