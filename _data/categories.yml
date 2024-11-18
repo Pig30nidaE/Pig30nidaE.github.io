@@ -54,6 +54,8 @@
             url: categories/Algorithm/BOJ/silver/BOJ 1012
           - title: BOJ 7562 - 나이트의 이동
             url: categories/Algorithm/BOJ/silver/BOJ 7562
+          - title: BOJ 17478 - 재귀함수가 뭔가요?
+            url: categories/Algorithm/BOJ/silver/BOJ 17478
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
