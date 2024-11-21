@@ -5,7 +5,7 @@
 <!-- _includes/category.html -->
 <ul class="tree">
   {% if include.category.posts or include.category.subcategories %}
-    <li>
+    <li class="tree-li">
       <input type="checkbox" class="custom-input" id="{{ include.category.name | slugify }}" checked />
       <label class="category-label {{ include.category.name }}" for="{{ include.category.name | slugify }}">
           <span class="custom-label">
@@ -15,9 +15,9 @@
           {{ include.category.name }}
       </label>
       
+    <ul class="postinfo">
     {% for post_id in include.category.posts %}
     {% assign post = site.posts | where: "title", post_id.title | first %}
-      <ul class="postinfo">
         <li class="postinfo-{{ post.title }}">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <span class="material-symbols-outlined">
@@ -27,14 +27,14 @@
             {{ post.title }}
           </a>
         </li>
-      </ul>
-    {% endfor %}
+        {% endfor %}
+    </ul>
     {% if include.category.subcategories %}
     {% for subcategory in include.category.subcategories %}
     <ul class="tree">
             <li class="subcategory {{ subcategory.name }}">{% include category.html category=subcategory %}</li>
-        </ul>
-        {% endfor %}
+    </ul>
+    {% endfor %}
     {% endif %}
   </li>
   {% endif %}
