@@ -59,6 +59,9 @@
           - title: BOJ 1780 - 종이의 개수
             url: categories/Algorithm/BOJ/silver/BOJ 1780
         - name: gold
+          - title: BOJ 1992 - 쿼드트리
+            url: categories/Algorithm/BOJ/silver/BOJ 1992
+        - name: gold
           posts:
             - title: BOJ 15683 - 감시
               url: categories/Algorithm/BOJ/gold/BOJ 15683
