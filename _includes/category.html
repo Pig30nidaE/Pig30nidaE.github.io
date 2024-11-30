@@ -1,42 +1,44 @@
 <head>
-  <link rel="stylesheet" href="/css/categories.css">
-  <script src="/assets/js/categories.js"></script>
-</head>
-<!-- _includes/category.html -->
-<ul class="tree">
-  {% if include.category.posts or include.category.subcategories %}
-    <li class="tree-li">
-      <input type="checkbox" class="custom-input" id="{{ include.category.name | slugify }}" checked />
-      <label class="category-label {{ include.category.name }}" for="{{ include.category.name | slugify }}">
-          <span class="custom-label">
-              <span class="material-symbols-outlined custom-label-checked">folder</span>
-              <span class="material-symbols-outlined custom-label-unchecked">folder_open</span>
-          </span>
-          {{ include.category.name }}
-      </label>
-      
-    <ul class="postinfo">
-    {% for post_id in include.category.posts %}
-    {% assign post = site.posts | where: "title", post_id.title | first %}
-        <li class="postinfo-{{ post.title }}">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <span class="material-symbols-outlined">
-              description
+    <link rel="stylesheet" href="/css/categories.css">
+    <script src="/assets/js/categories.js"></script>
+  </head>
+  <!-- _includes/category.html -->
+  <ul class="tree">
+    {% if include.category.posts or include.category.subcategories %}
+      <li class="tree-li">
+        <input type="checkbox" class="custom-input" id="{{ include.category.name | slugify }}" checked />
+        <label class="category-label {{ include.category.name }}" for="{{ include.category.name | slugify }}">
+            <span class="custom-label">
+                <span class="material-symbols-outlined custom-label-checked">folder</span>
+                <span class="material-symbols-outlined custom-label-unchecked">folder_open</span>
             </span>
-            <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time> / 
-            {{ post.title }}
-          </a>
-        </li>
-        {% endfor %}
-    </ul>
-    {% if include.category.subcategories %}
-    {% for subcategory in include.category.subcategories %}
-    <ul class="tree">
-            <li class="subcategory {{ subcategory.name }}">{% include category.html category=subcategory %}</li>
-    </ul>
-    {% endfor %}
+            {{ include.category.name }}
+        </label>
+        
+      <ul class="postinfo">
+      {% for post_id in include.category.posts %}
+      {% assign post = site.posts | where: "title", post_id.title | first %}
+      {% if post.published == true %}
+          <li class="postinfo-{{ post.title }}">
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+              <span class="material-symbols-outlined">
+                description
+              </span>
+              <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time> / 
+              {{ post.title }}
+            </a>
+          </li>
+      {% endif %}
+      {% endfor %}
+      </ul>
+      {% if include.category.subcategories %}
+      {% for subcategory in include.category.subcategories %}
+      <ul class="tree">
+              <li class="subcategory {{ subcategory.name }}">{% include category.html category=subcategory %}</li>
+      </ul>
+      {% endfor %}
+      {% endif %}
+    </li>
     {% endif %}
-  </li>
-  {% endif %}
   </ul>
   

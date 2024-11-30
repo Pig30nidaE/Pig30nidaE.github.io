@@ -58,7 +58,6 @@
             url: categories/Algorithm/BOJ/silver/BOJ 17478
           - title: BOJ 1780 - 종이의 개수
             url: categories/Algorithm/BOJ/silver/BOJ 1780
-        - name: gold
           - title: BOJ 1992 - 쿼드트리
             url: categories/Algorithm/BOJ/silver/BOJ 1992
         - name: gold
@@ -109,6 +108,9 @@
             url: categories/Kaggle/Courses/Kaggle Courses - Your First Machine Learning Model
           - title: Kaggle Courses - Model Validation
             url: categories/Kaggle/Courses/Kaggle Courses - Model Validation
-          # - title: Kaggle Courses - Underfitting and Overfitting
-          #   url: categories/Kaggle/Courses/Kaggle Courses - Underfitting and Overfitting
-          
+          - title: Kaggle Courses - Underfitting and Overfitting
+            url: categories/Kaggle/Courses/Kaggle Courses - Underfitting and Overfitting
+- name: Blog
+  posts:
+  - title: 블로그 수정 - 검색 결과
+    url: categories/Blog/블로그 수정 - 검색 결과
