@@ -29,6 +29,11 @@
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out; /* opacity와 max-height가 부드럽게 변경되도록 트랜지션 추가 */
 }
 
+.postinfo {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
 /* 클릭 시 요소 숨기기 */
 .custom-input:checked ~ .postinfo, .custom-input:checked ~ .tree {
     opacity: 0;

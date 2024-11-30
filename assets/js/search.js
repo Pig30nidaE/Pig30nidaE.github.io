@@ -1,24 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var header = document.querySelector('header');
     var searchInput = document.getElementById('search-input');
     var resultsContainer = document.getElementById('results-container');
     var hashTags = document.querySelectorAll('#search-tag span');
     
+    // 검색창에 포커스가 있을 때 결과 표시
     searchInput.addEventListener('focus', function() {
-        var searchTerm = searchInput.value;
-
-        // 검색어가 있을 때만 결과를 보이게 함
         resultsContainer.classList.add('active');
         resultsContainer.style.display = 'block';
     });
-
-    searchInput.addEventListener('blur', function() {
-        var searchTerm = searchInput.value;
-
-        // 검색어가 있을 때만 결과를 보이게 함
-        resultsContainer.classList.add('active');
-        resultsContainer.style.display = 'none';
+    
+    // 포커스 해제 시 결과를 숨기지만, 클릭한 요소가 결과 컨테이너 내부라면 숨기지 않음
+    searchInput.addEventListener('blur', function(event) {
+        var relatedTarget = event.relatedTarget; // blur 시 포커스 이동 대상
+        if (!resultsContainer.contains(relatedTarget)) {
+            resultsContainer.classList.remove('active');
+            resultsContainer.style.display = 'none';
+        }
     });
+    
+    // 검색 결과 링크 클릭 시 결과 숨기기
+    resultsContainer.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            resultsContainer.classList.remove('active');
+            resultsContainer.style.display = 'none';
+        }
+    });
+    
 
     hashTags.forEach(function(tag) {
         tag.addEventListener('click', function() {
