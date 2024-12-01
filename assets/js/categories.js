@@ -7,7 +7,6 @@ window.onload = function() {
         var ids = categoryId.split('-').map(function(id) {
             return id.replace(/_/g, '-');
         });
-        console.log(ids);
 
         // 각 부분을 사용하여 체크박스를 찾고 언체크
         ids.forEach(function(id, index) {
