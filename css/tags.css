@@ -1,0 +1,105 @@
+/* 기본 스타일 */
+:root {
+    --red: #ff3860;
+    --blue: #498afb;
+    --orange: #fa8142;
+    --green: #09c372;
+    --purple: #9166cc;
+    --yellow: #ffdd57;
+    --pink: #ff4088;
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+    --nav-width: 4em;
+    --font-body: "sofia-pro", sans-serif;
+    --font-head: "sofia-pro", sans-serif;
+    --font-size: 20px;
+    --max-width-bp: 768px;
+    --orange-pink: linear-gradient(to bottom right, var(--orange-light), var(--orange-dark) 85%);
+    --green-grad: linear-gradient(to bottom right, var(--green-light), var(--green-dark) 85%);
+    --background: var(--gray6);
+    --text-color: var(--gray2);
+    --h-color: #fff;
+    --nav-bg: var(--gray5);
+    --tag-bg: var(--gray4);
+    --card-radius: 0.25em;
+    transition: all .3s ease;
+}
+
+/* 태그 스타일 */
+.tag {
+    display: inline-block;
+    padding: .2em .5em;
+    border-radius: 4px;
+    background: var(--tag-bg);
+    color: var(--text-color);
+    font-weight: 600;
+    margin: .25em .1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tag:hover {
+    background-color: var(--blue); /* 마우스를 올리면 태그 색상 변경 */
+}
+
+/* 포커스된 태그 스타일 */
+.tag.focus {
+    background-color: var(--blue); /* 포커스된 태그의 색상 변경 */
+    color: white; /* 포커스된 태그의 글자 색상 변경 */
+}
+
+/* 포스트 목록 숨기기 */
+.tag-posts {
+    display: none;  /* 기본적으로 숨김 */
+    background: var(--gray5);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin-top: .5em;
+    width: 100%;
+    position: absolute; /* 포스트 목록을 절대 위치로 설정 */
+    z-index: 100; /* 다른 태그들보다 위로 표시 */
+    transition: all 0.3s ease;
+    width: auto;
+    max-width: 100%;
+    
+}
+
+/* 클릭 시 포스트 목록 보이기 */
+.tag-posts.show {
+    display: block;  /* show 클래스가 적용되면 보이도록 설정 */
+}
+
+/* 포스트 링크 스타일 */
+.tag-posts ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tag-posts li {
+    margin: 0.5em 0;
+}
+
+.tag-posts a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.tag-posts a:hover {
+    color: var(--blue);
+}
+
+
+/* 태그 강조 */
+.highlight {
+    background-color: var(--blue); /* 강조된 태그의 색상 변경 */
+    color: white; /* 강조된 태그의 글자 색상 변경 */
+}
