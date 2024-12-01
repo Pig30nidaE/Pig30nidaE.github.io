@@ -18,7 +18,7 @@
       <ul class="postinfo">
       {% for post_id in include.category.posts %}
       {% assign post = site.posts | where: "title", post_id.title | first %}
-      {% if post.published == true %}
+      {% if post.published != false %}
           <li class="postinfo-{{ post.title }}">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
               <span class="material-symbols-outlined">
