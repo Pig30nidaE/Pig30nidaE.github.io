@@ -27,7 +27,6 @@ use_math: true
             {% endif %}
             | 
             <span class="material-icons">date_range</span>
-            <time datetime="{{ post.date | date_to_xmlschema }}">last modified at {{ post.last_modified_at | date_to_string }}</time> / created at
             <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }}</time>
           </div>
           

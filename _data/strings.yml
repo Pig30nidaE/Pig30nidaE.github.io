@@ -70,7 +70,6 @@ error:
 # Separators
 # ---------------------------------------------------------------------------------------
 posted:                'Posted'
-last_modified_at:      'Last modified at'
 last_modified_at_icon: 'icon-history'
 colon:                 ':'
 separator:             '|'

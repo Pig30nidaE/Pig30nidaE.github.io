@@ -26,7 +26,6 @@ layout: default
     {% endif %}
     | 
     <span class="material-icons">date_range</span>
-    <time datetime="{{ page.date | date_to_xmlschema }}">last modified at {{ page.last_modified_at | date_to_string }}</time> / created at
     <time datetime="{{ page.date | date_to_xmlschema }}"> {{ page.date | date_to_string }}</time>
   </span>
   <p class="tags">
