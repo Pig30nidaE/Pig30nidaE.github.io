@@ -62,6 +62,8 @@
             url: categories/Algorithm/BOJ/silver/BOJ 1992
           - title: BOJ 1541 - 잃어버린 괄호
             url: categories/Algorithm/BOJ/silver/BOJ 1541
+          - title: BOJ 11279 - 최대 힙
+            url: categories/Algorithm/BOJ/silver/BOJ 11279
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
