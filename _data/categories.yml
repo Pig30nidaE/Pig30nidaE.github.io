@@ -64,6 +64,10 @@
             url: categories/Algorithm/BOJ/silver/BOJ 1541
           - title: BOJ 11279 - 최대 힙
             url: categories/Algorithm/BOJ/silver/BOJ 11279
+          - title: BOJ 2667 - 단지번호 붙이기
+            url: categories/Algorithm/BOJ/silver/BOJ 2667
+          - title: BOJ 15652 - N과 M (4)
+            url: categories/Algorithm/BOJ/silver/BOJ 15652
         - name: gold
           posts:
             - title: BOJ 15683 - 감시
